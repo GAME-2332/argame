@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     private Transform target;
 
     public float speed = 70f;
+    public GameObject impactFX;
 
     public void Seek(Transform _target){
         target = _target;
@@ -21,8 +22,7 @@ public class Bullet : MonoBehaviour
         float distanceThisFrame = speed * Time.deltaTime;
 
         //dir( direction) magnitude  is the current distance to the target, if its less than this frame, you hit the object
-        if (dir.magnitude <= distanceThisFrame)
-        {
+        if (dir.magnitude <= distanceThisFrame){
             HitTarget();
             return;
             
@@ -31,8 +31,13 @@ public class Bullet : MonoBehaviour
          transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget() {
-        Debug.Log("I am shooting ");
+    void HitTarget(){
+        GameObject effectIns = (GameObject)Instantiate(impactFX, transform.position, transform.rotation);
+        Destroy(effectIns, 2f);
+        Destroy(gameObject);
+        
+        //This basically kills the enemy
+        // Destroy(target.gameObject);
     }
     
 }
