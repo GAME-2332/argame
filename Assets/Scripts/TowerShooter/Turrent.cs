@@ -7,10 +7,24 @@ public class Turrent : MonoBehaviour
 {
 
     private Transform target;
+    
+    [Header("Attributes")]
+    
     public float range = 15f;
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
+    
+    [Header(("Unity Setup Fields"))]
     public string enemyTag = "Enemy";
+    
+    
     public Transform turrentBase;
     public float turrentSpeed = 10f;
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    
+    
     void Start() {
         //Repeats called method
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -54,6 +68,25 @@ public class Turrent : MonoBehaviour
            //this actually turns the turrent
            turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
+           if (fireCountdown <= 0f)
+           {
+               Shoot();
+               // if firerate is 2, fire 2 bullet each second, countdown from .5
+               fireCountdown = 1f / fireRate;
+           }
+
+           fireCountdown -= Time.deltaTime;
+
+    }
+
+    void Shoot()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+            bullet.Seek(target);
+        // Debug.Log("Shoot!");
     }
 
      void OnDrawGizmosSelected()

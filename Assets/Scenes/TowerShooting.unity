@@ -350,6 +350,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &865389740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 237186316095615569, guid: bb190b93d9a25c64fada8edd249a00fc, type: 3}
+  m_PrefabInstance: {fileID: 3550564258964163385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1802097839
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3550564259092779800, guid: bb190b93d9a25c64fada8edd249a00fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.97
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 3550564259092779800, guid: bb190b93d9a25c64fada8edd249a00fc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -660,6 +665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3550564259092779812, guid: bb190b93d9a25c64fada8edd249a00fc, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 865389740}
     - target: {fileID: 3550564259092779813, guid: bb190b93d9a25c64fada8edd249a00fc, type: 3}
       propertyPath: m_Name
       value: amongus tower
