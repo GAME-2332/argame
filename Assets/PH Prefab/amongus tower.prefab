@@ -802,7 +802,7 @@ MonoBehaviour:
   turrentBase: {fileID: 3550564259568118855}
   turrentSpeed: 10
   bulletPrefab: {fileID: 6077487748653658868, guid: 4d30ea8b787384349ae5a46d0f444328, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 237186316095615569}
 --- !u!1 &3550564259194576594
 GameObject:
   m_ObjectHideFlags: 0
