@@ -1,8 +1,12 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     private Transform target;
+
+    public int Bulletdamage = 5;
 
     public float speed = 70f;
     public GameObject impactFX;
@@ -34,10 +38,14 @@ public class Bullet : MonoBehaviour
     void HitTarget(){
         GameObject effectIns = (GameObject)Instantiate(impactFX, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
+        //The bullet looks for a component that has the enemy script, finds a method for taking damage (could be anything you call it ex. enemyDamage etc.
+        if (target.GetComponent<TestEnemy>()){
+            target.GetComponent<TestEnemy>().TakeDamage(Bulletdamage);
+        }
+        //This destroys the bullet
         Destroy(gameObject);
         
-        //This basically kills the enemy
-        // Destroy(target.gameObject);
     }
     
+
 }
