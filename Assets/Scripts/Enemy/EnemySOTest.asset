@@ -18,3 +18,4 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   speed: 10
+  attackspeed: 1.5

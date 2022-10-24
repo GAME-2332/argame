@@ -33,12 +33,6 @@ public class HealthBar : MonoBehaviour
         health.anchorMax = new Vector2(newPercentage, 1f);
         StartCoroutine("Decrement");
     }
-
-    float playpercent;
-    private void Update()
-    {
-     
-    }
     IEnumerator Decrement()
     {
         while (currentPercent - nextPercent > 0) 

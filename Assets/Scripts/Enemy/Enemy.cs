@@ -16,12 +16,19 @@ public class Enemy : MonoBehaviour {
     public int maxHealth;
     [SerializeField]
     public float speed;
+    [SerializeField]
+    public float attackspeed;//continuously deals damage.
 
     [SerializeField]
     EnemySO enemyinfo;
 
     [SerializeField]
     HealthBar healthbar;
+
+    [SerializeField]
+    bool isAttacking;
+
+    Player player; //is referenced when we collide with player and continue to attack it.
 
     private void Start()
     {
@@ -38,7 +45,7 @@ public class Enemy : MonoBehaviour {
         {
             healthbar = GetComponentInChildren<HealthBar>();
         }
-
+        isAttacking = false;
     }
 
     public void SpawnByEnemyInfo(EnemySO info)
@@ -49,6 +56,7 @@ public class Enemy : MonoBehaviour {
         maxHealth = info.maxHealth;
         speed = info.speed;
         currenthealth = maxHealth;
+        attackspeed = info.attackspeed;
     }
 
     public void DefaultSetUp()
@@ -59,6 +67,7 @@ public class Enemy : MonoBehaviour {
         maxHealth = 100;
         currenthealth = maxHealth;
         speed = 1;
+        attackspeed = 1f;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -67,11 +76,29 @@ public class Enemy : MonoBehaviour {
         //if it is a bullet, it will receive damage.
         Debug.Log("ouch!");
         TakeDamage(Random.Range(30,80));
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("I've hit player!");
+            player = collision.gameObject.GetComponent<Player>();
+            player.TakeDamage(damage);
+            isAttacking = true;
+            StartCoroutine("Attacking");
+        }
     }
 
-    public void DealDamage()
+    private void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("taking 10 damage!");
+            TakeDamage(10);
+        }
+    }
+    public int DealDamage()
+    {
+        return damage;
     }
 
     public void TakeDamage(int damageDealt)
@@ -93,6 +120,18 @@ public class Enemy : MonoBehaviour {
 
     }
 
+    IEnumerator Attacking()
+    {
+        while(isAttacking == true)
+        {
+            if(player != null)
+            {
+                player.TakeDamage(damage);
+            }
+            yield return new WaitForSeconds(attackspeed);
+        }
+        yield return new WaitForSeconds(attackspeed);
+    }
     public void Die()
     {
         DropCoins();
@@ -101,5 +140,7 @@ public class Enemy : MonoBehaviour {
     public void DropCoins()
     {
         Debug.Log("I drop.." + coinsDropped);
+        //now you die after dropping the coins.
+        GameObject.Destroy(this.gameObject);
     }
 }

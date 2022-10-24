@@ -17,6 +17,8 @@ public class EnemySO : ScriptableObject
     public int currentHealth;
     [SerializeField]
     public float speed;
+    [SerializeField]
+    public float attackspeed;
 
     
 }
