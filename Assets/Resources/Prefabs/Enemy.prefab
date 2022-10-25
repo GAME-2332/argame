@@ -152,8 +152,10 @@ MonoBehaviour:
   currenthealth: 0
   maxHealth: 0
   speed: 0
-  enemyinfo: {fileID: 0}
+  attackspeed: 0
+  enemyinfo: {fileID: 11400000, guid: cc00978923536734fb530c54f6c20162, type: 2}
   healthbar: {fileID: 0}
+  isAttacking: 0
 --- !u!1001 &5482548001556418804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +163,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1061938211455352185}
     m_Modifications:
+    - target: {fileID: 5482548001346147587, guid: 397de6104fc453341ab2dbf06deecedf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482548001346147587, guid: 397de6104fc453341ab2dbf06deecedf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482548001346147587, guid: 397de6104fc453341ab2dbf06deecedf, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5482548002877356990, guid: 397de6104fc453341ab2dbf06deecedf, type: 3}
       propertyPath: m_Name
       value: Health
