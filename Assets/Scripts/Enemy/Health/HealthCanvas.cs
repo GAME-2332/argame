@@ -10,8 +10,6 @@ public class HealthCanvas : MonoBehaviour
     [SerializeField]
     List<HealthAnchor> _anchors;
 
-    [SerializeField]
-    List<string> anchornames;
 
     [SerializeField]
     List<RectTransform> _HealthBars; //on these targets spawn the health bars. Targets follow the anchors attached on the gameobject.
@@ -39,7 +37,7 @@ public class HealthCanvas : MonoBehaviour
     void Start()
     {
        // _anchors = new List<HealthAnchor>();
-        //anchornames = new List<string>();
+
        // _HealthBars = new List<RectTransform>();
         if (_cam == null)
         {
@@ -47,7 +45,7 @@ public class HealthCanvas : MonoBehaviour
         }
         if(HealthBarPrefab == null)
         {
-            HealthBarPrefab = Resources.Load<GameObject>("Prefabs/HealthBar_Target");
+            HealthBarPrefab = Resources.Load<GameObject>("Prefabs/UI/HealthBar_Target");
         }
         
         SetSizes();
@@ -56,25 +54,12 @@ public class HealthCanvas : MonoBehaviour
     public void AddAnchor(HealthAnchor _ha)
     {
         currentCount++;
-        Debug.Log("Health Anchor Added " + _ha.name);
-        anchornames.Add(_ha.name);
+        
         _anchors.Add(_ha);
         new_anchor = _ha;
         CreateAHealthBar();
         _ha.SetHealth(_HealthBars[currentCount].GetComponent<HealthBar>());
-        /*
-        Debug.Log("Add Anchor called." + _ha.name);
        
-        _anchors.Add(_ha);
-        Debug.Log("Anchors in scene:" + _anchors.Count);
-        GameObject _newtarget = Instantiate(HealthBarPrefab, transform);
-      
-        _HealthBars.Add(_newtarget.GetComponent<RectTransform>());
-        Debug.Log("Bars in scene:" + _HealthBars.Count);
-
-        //but why?? are they getting deleted??? 
-        _ha.SetHealth(_newtarget.GetComponent<HealthBar>());
-        */
     }
 
     [SerializeField]
@@ -89,30 +74,23 @@ public class HealthCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Anchors in scene:" + _anchors.Count);
-           
-            Debug.Log("Bars in scene:" + _HealthBars.Count);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("Created a health bar");
-            CreateAHealthBar();
-            Debug.Log("Anchors in scene:" + _anchors.Count);
-
-            Debug.Log("Bars in scene:" + _HealthBars.Count);
-        }
        if (_anchors.Count > 1)
         {
             //check if any enemies have died.
+            bool SomeoneHasDied = false;
+
+
             for (int i = 1; i < _anchors.Count; i++)
             {
                 if (_anchors[i] == null)
                 {
+                    SomeoneHasDied = true;
                     _anchors.RemoveAt(i);
+
                     GameObject.Destroy(_HealthBars[i].gameObject);
                     _HealthBars.RemoveAt(i);//this only removes the reference, you must destroy it too.
+                    i--; //go back, since the list is a little shorter now.
+                    currentCount--;//this keeps track of the healthbars, when new ones are created they're added to the end of the list and a reference is passed back.
                 }
             }
             for(int i = 1; i < _anchors.Count; i++)
@@ -128,7 +106,6 @@ public class HealthCanvas : MonoBehaviour
     #region DisplayBarsOnScreen
     [SerializeField]
     Vector2 RawPosition;
-
 
     [SerializeField]
     Vector2 camscreen;

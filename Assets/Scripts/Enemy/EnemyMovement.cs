@@ -17,12 +17,25 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(destination != null)
+        {
+            CanMove = true;
+        }
+    }
+
+    public void SetDestination(Transform newdestination)
+    {
+        destination = newdestination;
         CanMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (destination == null)
+        {
+            CanMove = false;
+        }
         if(CanMove == true)
         {
             elapsedtime += Time.deltaTime;
@@ -42,9 +55,12 @@ public class EnemyMovement : MonoBehaviour
     Quaternion finalrotation;
     private void OnCollisionEnter(Collision collision)
     {
+       if(collision.gameObject.tag == "Player")
+        {
+            CanMove = false;
+            finallocation = m_transform.position;
+            finalrotation = m_transform.rotation;
+        }
        
-        CanMove = false;
-        finallocation = m_transform.position;
-        finalrotation = m_transform.rotation;
     }
 }

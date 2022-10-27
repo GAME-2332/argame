@@ -15,9 +15,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxhealth = 500;
-        currenthealth = maxhealth;
+        if(maxhealth <= 0)
+        {
+            maxhealth = 500;
+            currenthealth = maxhealth;
+        }
 
+        currenthealth = maxhealth;
         if (healthbar == null)
         {
             healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();

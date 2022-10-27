@@ -27,7 +27,8 @@ public class Enemy : MonoBehaviour {
 
     [SerializeField]
     bool isAttacking;
-
+    [SerializeField]
+    NumbersCanvas NUMBERSCANVAS;
     Player player; //is referenced when we collide with player and continue to attack it.
 
     private void Start()
@@ -46,6 +47,11 @@ public class Enemy : MonoBehaviour {
            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
         }
         isAttacking = false;
+
+        if (NUMBERSCANVAS == null)
+        {
+            NUMBERSCANVAS = GameObject.FindObjectOfType<NumbersCanvas>();
+        }
     }
 
     public void SpawnByEnemyInfo(EnemySO info)
@@ -74,14 +80,12 @@ public class Enemy : MonoBehaviour {
     {
         //if it interacts with a player, deal damage
         //if it is a bullet, it will receive damage.
-        Debug.Log("ouch!");
-        TakeDamage(Random.Range(30,80));
+       
 
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("I've hit player!");
             player = collision.gameObject.GetComponent<Player>();
-            player.TakeDamage(damage);
             isAttacking = true;
             StartCoroutine("Attacking");
         }
@@ -103,6 +107,7 @@ public class Enemy : MonoBehaviour {
 
     public void TakeDamage(int damageDealt)
     {
+        NUMBERSCANVAS.CreateTakeDamage(this.transform,damageDealt);
         currenthealth -= damageDealt;
        
 
@@ -124,10 +129,7 @@ public class Enemy : MonoBehaviour {
     {
         while(isAttacking == true)
         {
-            if(player != null)
-            {
-                player.TakeDamage(damage);
-            }
+            Attack();
             yield return new WaitForSeconds(attackspeed);
         }
         yield return new WaitForSeconds(attackspeed);
@@ -137,9 +139,29 @@ public class Enemy : MonoBehaviour {
         DropCoins();
     }
 
+    void Attack()
+    {
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+
+            float x = player.transform.position.x + this.transform.position.x;
+            float y = player.transform.position.y + this.transform.position.y;
+            float z = player.transform.position.z + this.transform.position.z;
+            x = x / 2f;
+            y = y / 2f;
+            z = z / 2f;
+            Vector3 midpoint = new Vector3(  x,y,z );
+            //NUMBERSCANVAS.CreateAttackText(this.transform, damage);
+            NUMBERSCANVAS.CreateAttackText(midpoint, damage);
+        }
+        
+    }
+
     public void DropCoins()
     {
         Debug.Log("I drop.." + coinsDropped);
+        NUMBERSCANVAS.CreateCoinText(this.transform, coinsDropped);
         //now you die after dropping the coins.
         GameObject.Destroy(this.gameObject);
     }
