@@ -663,6 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204cd32c2c9f0ae49a99bc609ab7a4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootAudio: {fileID: 0}
+  soundFX: []
   range: 8
   fireRate: 0.1
   enemyTag: Enemy

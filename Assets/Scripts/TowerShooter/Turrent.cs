@@ -91,9 +91,11 @@ public class Turrent : MonoBehaviour
     void Shoot() {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        
         //plays shooting sfx
         shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
         shootAudio.Play();
+        
         if (bullet != null)
             bullet.Seek(target);
         // Debug.Log("Shoot!");
