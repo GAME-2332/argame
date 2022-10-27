@@ -600,7 +600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204cd32c2c9f0ae49a99bc609ab7a4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  shootAudio: {fileID: 0}
+  soundFX:
+  - {fileID: 8300000, guid: 167a305372f9f3240aa6e0c27797f9c3, type: 3}
+  - {fileID: 8300000, guid: e4aa71bda81820f458ca45ce01d60a86, type: 3}
+  range: 6.57
   fireRate: 2
   enemyTag: Enemy
   turrentBase: {fileID: 3550564259568118855}

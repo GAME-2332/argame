@@ -2,11 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
+
 
 public class Turrent : MonoBehaviour
 {
 
     private Transform target;
+
+    [Header("Audio")] 
+     public AudioSource shootAudio;
+    public AudioClip[] soundFX;
+    
+    
     
     [Header("Attributes")]
     
@@ -15,9 +24,9 @@ public class Turrent : MonoBehaviour
     private float fireCountdown = 0f;
     
     [Header(("Unity Setup Fields"))]
+    
     public string enemyTag = "Enemy";
-    
-    
+
     public Transform turrentBase;
     public float turrentSpeed = 10f;
 
@@ -79,11 +88,12 @@ public class Turrent : MonoBehaviour
 
     }
 
-    void Shoot()
-    {
+    void Shoot() {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-
+        //plays shooting sfx
+        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
+        shootAudio.Play();
         if (bullet != null)
             bullet.Seek(target);
         // Debug.Log("Shoot!");
