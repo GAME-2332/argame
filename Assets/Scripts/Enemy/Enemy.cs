@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour {
 
         if(healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthBar>();
+           healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
         }
         isAttacking = false;
     }
@@ -114,7 +114,7 @@ public class Enemy : MonoBehaviour {
         float percentage = (float)currenthealth / (float)maxHealth;
         if (healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthBar>();
+            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
         }
         healthbar.SetNextPercent(percentage);
 

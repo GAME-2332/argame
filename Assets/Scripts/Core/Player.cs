@@ -18,9 +18,9 @@ public class Player : MonoBehaviour
         maxhealth = 500;
         currenthealth = maxhealth;
 
-        if(healthbar == null)
+        if (healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthBar>();
+            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
         }
 
     }
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         }
         if (healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthBar>();
+            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
         }
         float percentage = (float)currenthealth / (float)maxhealth;
         healthbar.SetNextPercent(percentage);

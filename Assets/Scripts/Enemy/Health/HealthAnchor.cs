@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class HealthAnchor : MonoBehaviour
 {
+    public delegate void AddAnchor(HealthAnchor _anchorref);
+    public static event AddAnchor OnAddAnchor;
+
     [SerializeField]
     HealthCanvas HEALTHCANVAS;
+
+    [SerializeField]
+    HealthBar _myhealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,23 +20,22 @@ public class HealthAnchor : MonoBehaviour
             HEALTHCANVAS = GameObject.FindObjectOfType<HealthCanvas>();
         }
         HEALTHCANVAS.AddAnchor(this);
-
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHealth(HealthBar reference_to_Health_Canvas_Health_Bar)
     {
-       // SayPosition();
+        _myhealth = reference_to_Health_Canvas_Health_Bar;
+
     }
 
-    void SayPosition()
+    public HealthBar GetHealthBar()
     {
-        Debug.Log(transform.position);
+       
+        return _myhealth;
     }
-
     public Vector3 GetPosition()
     {
-        Debug.Log(transform.position);
-        return transform.parent.position;
+        //Debug.Log(transform.position);
+        return transform.position;
     }
 }
