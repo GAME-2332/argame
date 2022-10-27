@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using static UnityEngine.GraphicsBuffer;
@@ -33,13 +34,13 @@ public class HealthCanvas : MonoBehaviour
     HealthAnchor new_anchor;
 
     [SerializeField]
-    HealthAnchor anchor2;
+    int currentCount;
     // Start is called before the first frame update
     void Start()
     {
-        _anchors = new List<HealthAnchor>();
-        anchornames = new List<string>();
-        _HealthBars = new List<RectTransform>();
+       // _anchors = new List<HealthAnchor>();
+        //anchornames = new List<string>();
+       // _HealthBars = new List<RectTransform>();
         if (_cam == null)
         {
             _cam = GameObject.FindObjectOfType<Camera>();
@@ -54,12 +55,13 @@ public class HealthCanvas : MonoBehaviour
 
     public void AddAnchor(HealthAnchor _ha)
     {
+        currentCount++;
         Debug.Log("Health Anchor Added " + _ha.name);
         anchornames.Add(_ha.name);
+        _anchors.Add(_ha);
         new_anchor = _ha;
-
-        GameObject NewAnchorGO = Instantiate(new GameObject,);
-       
+        CreateAHealthBar();
+        _ha.SetHealth(_HealthBars[currentCount].GetComponent<HealthBar>());
         /*
         Debug.Log("Add Anchor called." + _ha.name);
        
@@ -101,19 +103,29 @@ public class HealthCanvas : MonoBehaviour
 
             Debug.Log("Bars in scene:" + _HealthBars.Count);
         }
-       /* if (_anchors != null && _anchors.Count > 0)
+       if (_anchors.Count > 1)
         {
-
-            for(int i = 0; i < _anchors.Count; i++)
+            //check if any enemies have died.
+            for (int i = 1; i < _anchors.Count; i++)
             {
+                if (_anchors[i] == null)
+                {
+                    _anchors.RemoveAt(i);
+                    GameObject.Destroy(_HealthBars[i].gameObject);
+                    _HealthBars.RemoveAt(i);//this only removes the reference, you must destroy it too.
+                }
+            }
+            for(int i = 1; i < _anchors.Count; i++)
+            {
+               
                _HealthBars[i].localPosition = Get2DPosition(_anchors[i]);
 
             }
         }
-      */
+      
       
     }
-
+    #region DisplayBarsOnScreen
     [SerializeField]
     Vector2 RawPosition;
 
@@ -210,5 +222,5 @@ public class HealthCanvas : MonoBehaviour
 
 
     }
-
+    #endregion
 }
