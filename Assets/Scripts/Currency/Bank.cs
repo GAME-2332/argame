@@ -47,4 +47,9 @@ public class Bank : MonoBehaviour
         BankText.text = currentAmount.ToString() + " Coins";
 
     }
+
+    void SubtractCoins(int CoinsToSubtract)
+    {
+
+    }
 }
