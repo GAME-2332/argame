@@ -31,7 +31,16 @@ public class EnemyMovement : MonoBehaviour
     void FindPlayer()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        SetDestination(player.transform);
+        if(player == null)
+        {
+            //player is probably dead
+            CanMove = false;
+        }
+        else
+        {
+            SetDestination(player.transform);
+        }
+       
     }
 
     public void SetDestination(Transform newdestination)

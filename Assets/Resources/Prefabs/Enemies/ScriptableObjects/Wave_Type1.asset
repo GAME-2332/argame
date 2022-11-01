@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Wave_Type1
   m_EditorClassIdentifier: 
   NumberOfEnemies: 5
-  TypeOfEnemy: {fileID: 0}
   Seconds_Between_Spawn: 1
-  EnemyTypePath: Prefabs/Enemies/Enemy
+  EnemyPrefabPath: Prefabs/Enemies/Enemy
