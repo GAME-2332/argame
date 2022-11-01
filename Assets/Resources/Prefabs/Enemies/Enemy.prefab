@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyname: 
   coinsDropped: 0
-  damage: 0
+  damage: 200
   currenthealth: 0
   maxHealth: 0
   speed: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   enemyinfo: {fileID: 11400000, guid: cc00978923536734fb530c54f6c20162, type: 2}
   healthbar: {fileID: 0}
   isAttacking: 0
+  NUMBERSCANVAS: {fileID: 0}
 --- !u!1001 &2331035890066276402
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,6 +21,17 @@ public class EnemyMovement : MonoBehaviour
         {
             CanMove = true;
         }
+
+        if(destination == null)
+        {
+            FindPlayer();
+        }
+    }
+
+    void FindPlayer()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        SetDestination(player.transform);
     }
 
     public void SetDestination(Transform newdestination)

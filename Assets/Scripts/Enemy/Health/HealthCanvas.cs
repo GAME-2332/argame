@@ -93,15 +93,21 @@ public class HealthCanvas : MonoBehaviour
                     currentCount--;//this keeps track of the healthbars, when new ones are created they're added to the end of the list and a reference is passed back.
                 }
             }
+            
             for(int i = 1; i < _anchors.Count; i++)
             {
-               
+                /*float distance = Vector2.Distance(_HealthBars[i].localPosition, Get2DPosition(_anchors[i])); ;
+                if (distance > 15)//reduce jitter. if the distance has changed by 10. 
+                {
+                    _HealthBars[i].localPosition = Get2DPosition(_anchors[i]);
+                }*/
                _HealthBars[i].localPosition = Get2DPosition(_anchors[i]);
 
             }
+            
         }
-      
-      
+
+
     }
     #region DisplayBarsOnScreen
     [SerializeField]
@@ -149,7 +155,7 @@ public class HealthCanvas : MonoBehaviour
         MIN_Y = (-1) * screen_height / 4f * 0.8f;
         */
 
-        MAX_X = CANVAS_WIDTH / 2f - BAR_WIDTH/2f;
+        MAX_X = CANVAS_WIDTH / 2f - BAR_WIDTH;
         MIN_X = (-1f) * MAX_X;
         MAX_Y = CANVAS_HEIGHT / 2f - BAR_HEIGHT/2f;
         MIN_Y = (-1f) * MAX_Y;
