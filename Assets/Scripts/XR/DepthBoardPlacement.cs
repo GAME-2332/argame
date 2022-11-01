@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 
 namespace XR {
     [RequireComponent(typeof(ARRaycastManager))]
-    public class BoardPlacement : MonoBehaviour {
+    public class DepthBoardPlacement : MonoBehaviour {
         public Camera camera;
         public GameObject boardPrefab;
 
