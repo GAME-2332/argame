@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -6,11 +5,15 @@ using UnityEngine.XR.ARSubsystems;
 namespace XR {
     [RequireComponent(typeof(ARTrackedImageManager))]
     public class QRBoardPlacement : MonoBehaviour {
+        public Vector3 placementOffset;
+        
         private ARTrackedImageManager _imageManager;
 
         private void OnEnable() {
             _imageManager = GetComponent<ARTrackedImageManager>();
             _imageManager.trackedImagesChanged += TrackedImagesChanged;
+            
+            Board.SetFollowOffset(placementOffset);
         }
 
         private void OnDisable() {
