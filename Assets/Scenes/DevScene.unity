@@ -402,7 +402,6 @@ GameObject:
   - component: {fileID: 1907635593}
   - component: {fileID: 1907635592}
   - component: {fileID: 1907635594}
-  - component: {fileID: 1907635595}
   - component: {fileID: 1907635597}
   - component: {fileID: 1907635598}
   - component: {fileID: 1907635599}
@@ -456,20 +455,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 9132908455318560015, guid: 49deec6ad41d5984bbb0b39cea516d5a, type: 3}
   m_DetectionMode: -1
---- !u!114 &1907635595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907635591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f747f97897495cbad5ed5ea1de61fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 309003489}
-  boardPrefab: {fileID: 5271474533919206506, guid: e9e98b19f38cc2141bfdfe7a8d1cf39c, type: 3}
 --- !u!114 &1907635597
 MonoBehaviour:
   m_ObjectHideFlags: 0
