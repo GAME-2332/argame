@@ -133,13 +133,14 @@ GameObject:
   m_Component:
   - component: {fileID: 309003494}
   - component: {fileID: 309003489}
+  - component: {fileID: 309003495}
   - component: {fileID: 309003493}
   - component: {fileID: 309003492}
   - component: {fileID: 309003491}
   - component: {fileID: 309003490}
-  - component: {fileID: 309003495}
   - component: {fileID: 309003497}
   - component: {fileID: 309003496}
+  - component: {fileID: 309003498}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -296,7 +297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309003488}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d71b883843748d49424917b78e2e28b, type: 3}
   m_Name: 
@@ -313,11 +314,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HumanSegmentationStencilMode: 2
-  m_HumanSegmentationDepthMode: 1
-  m_EnvironmentDepthMode: 2
-  m_EnvironmentDepthTemporalSmoothing: 1
+  m_HumanSegmentationStencilMode: 3
+  m_HumanSegmentationDepthMode: 2
+  m_EnvironmentDepthMode: 3
+  m_EnvironmentDepthTemporalSmoothing: 0
   m_OcclusionPreferenceMode: 1
+--- !u!114 &309003498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309003488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec256e8fb584fc985a41deb9e1d24e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525716581
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76bccd1a8f2d3a04f9463de099fbce19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placementOffset: {x: 0, y: 0.1, z: 0}
 --- !u!114 &1907635599
 MonoBehaviour:
   m_ObjectHideFlags: 0

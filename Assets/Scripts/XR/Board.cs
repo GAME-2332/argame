@@ -5,6 +5,7 @@ namespace XR {
     public class Board : MonoBehaviour {
         private static GameObject _prefab;
         private static Transform _followTarget;
+        private static Vector3 _followOffset = Vector3.zero;
         
         public static Board Instance { get; private set; }
 
@@ -35,6 +36,14 @@ namespace XR {
             _followTarget = null;
         }
         
+        public static void SetFollowOffset(Vector3 offset) {
+            _followOffset = offset;
+        }
+
+        public static void ClearFollowOffset() {
+            _followOffset = Vector3.zero;
+        }
+        
         private void Start() {
             if (Instance != null && Instance != this) Destroy(Instance.gameObject);
             Instance = this;
@@ -44,7 +53,7 @@ namespace XR {
 
         private void Update() {
             if (_followTarget != null) {
-                _transform.position = _followTarget.position;
+                _transform.position = _followTarget.position + _followOffset;
                 _transform.rotation = _followTarget.rotation;
             }
         }
