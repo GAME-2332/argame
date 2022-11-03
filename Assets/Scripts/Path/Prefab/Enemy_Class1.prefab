@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1274889912689098893}
   - component: {fileID: 1274889912689098898}
   - component: {fileID: 1274889912689098894}
+  - component: {fileID: 177183209}
   m_Layer: 0
   m_Name: Enemy_Class1
   m_TagString: Untagged
@@ -209,14 +210,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6053093b706e34ba94a30b1800ade5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolTarget:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  enemyClassObj: {fileID: 177183209}
   CurrentPosition: 0
-  Speed: 5
+--- !u!114 &177183209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274889912689098899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd9cf9130aebb44795a759566ba9ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyClass001:
+    spawnTime:
+    - 5
+    - 15
+    wavetime: 0
+    spawn_pos: {x: 0, y: 0.5, z: -10}
+    enemy: {fileID: 1274889912689098899}
+    speed: 5
+    pathTarget: []
+    spawn_interval: 1
+    wave_interval: 1
