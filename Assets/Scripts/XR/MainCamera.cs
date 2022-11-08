@@ -8,7 +8,7 @@ namespace XR {
 
         private Transform _transform;
         private Camera _camera;
-        [CanBeNull] private Interaction _hovered = null;
+        private Interaction _hovered;
         
         private void Start() {
             _transform = transform;
@@ -24,16 +24,9 @@ namespace XR {
             RaycastHit hit;
             if (Physics.Raycast(_transform.position, _transform.forward, out hit)) {
                 Interaction hitInteraction = hit.transform.GetComponent<Interaction>();
-                if (hitInteraction != _hovered) {
-                    if (hitInteraction == null) {
-                        if (_hovered != null) _hovered.SetOutline(false);
-                        _hovered = null;
-                    }
-
-                    if (_hovered != null) _hovered.SetOutline(false);
-                    _hovered = hitInteraction;
-                    _hovered.SetOutline(true);
-                }
+                if (_hovered != null) _hovered.SetOutline(false);
+                _hovered = hitInteraction;
+                if (_hovered != null) _hovered.SetOutline(true);
             } else {
                 if (_hovered != null) _hovered.SetOutline(false);
                 _hovered = null;
