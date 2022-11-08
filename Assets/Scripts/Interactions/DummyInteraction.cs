@@ -11,7 +11,8 @@ namespace DefaultNamespace {
         }
         
         public override void Interact() {
-            _rigidbody.AddForce(Vector3.up * .5f, ForceMode.Impulse);
+            Vector3 direction = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)) * Vector3.up;
+            _rigidbody.AddForce(direction * 2, ForceMode.Impulse);
         }
     }
 }
