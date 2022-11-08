@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy_Spwaner : MonoBehaviour
 {
-    public EnemyClass enemyClassObj;
+    [Tooltip("Enemy prefab in scene")]
+    public EnemyClass enemyPrefab;
 
 
     private float[] SpawnTime;
@@ -15,13 +16,13 @@ public class Enemy_Spwaner : MonoBehaviour
     private bool bTimer = false;
     private float timerCount;
 
-    private GameObject enemy;
+    private GameObject enemyObject;
 
-    private Vector3 spawn_pos;
+    private Vector3 spawnPosition;
 
-    private float spawn_interval = 1.0f;
+    private float waveStart = 1.0f;
 
-    private float wave_interval = 1.0f;
+    private float spawnInterval = 1.0f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,12 +30,12 @@ public class Enemy_Spwaner : MonoBehaviour
         bTimer = true;
         timerCount = 0;
 
-        SpawnTime = enemyClassObj.GetSpawnTime();
-        wavetime = enemyClassObj.GetWaveTime();
-        enemy = enemyClassObj.GetEnemy();
-        spawn_pos = enemyClassObj.GetSpawnPos();
-        spawn_interval = enemyClassObj.GetSpawnInterval();
-        wave_interval = enemyClassObj.GetWaveInterval();
+        SpawnTime = enemyPrefab.GetSpawnTime();
+        wavetime = enemyPrefab.GetWaveTime();
+        enemyObject = enemyPrefab.GetEnemy();
+        spawnPosition = enemyPrefab.GetSpawnPos();
+        waveStart = enemyPrefab.GetSpawnInterval();
+        spawnInterval = enemyPrefab.GetWaveInterval();
 
 
         SpawnRepeater();
@@ -53,13 +54,13 @@ public class Enemy_Spwaner : MonoBehaviour
         {
             if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime)
             {
-                Instantiate(enemy, spawn_pos, Quaternion.identity);
+                Instantiate(enemyObject, spawnPosition, Quaternion.identity);
             }
         }
     }
 
     void SpawnRepeater()
     {
-        InvokeRepeating("EnemySpawner", spawn_interval, wave_interval);
+        InvokeRepeating("EnemySpawner", waveStart, spawnInterval);
     }
 }
