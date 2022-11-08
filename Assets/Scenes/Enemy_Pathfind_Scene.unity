@@ -400,6 +400,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &170573522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1274889912689098899, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+  m_PrefabInstance: {fileID: 1990824065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &176886791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Class1
       objectReference: {fileID: 0}
+    - target: {fileID: 1274889912689098899, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
 --- !u!114 &176886792 stripped
@@ -497,7 +506,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
   m_PrefabInstance: {fileID: 1990824065}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 170573522}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbd9cf9130aebb44795a759566ba9ce0, type: 3}
@@ -1537,12 +1546,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267942419165183214, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 176886792}
+    - target: {fileID: 2267942419165183214, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: enemyClassObj
       value: 
       objectReference: {fileID: 176886792}
     - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: m_Name
       value: SpawnerDataPath (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98e322be999cad44a6824a1facca95f, type: 3}
@@ -3364,8 +3381,48 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.waveStart
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.waveLength
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.enemyObject
+      value: 
+      objectReference: {fileID: 170573522}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnTime.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
       propertyPath: EnemyClass001.pathTarget.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnTime.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
+      propertyPath: EnemyClass001.spawnTime.Array.data[2]
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 177183209, guid: c36d72f93454b9e448fde215752c9a87, type: 3}
       propertyPath: EnemyClass001.pathTarget.Array.data[0]
@@ -3567,6 +3624,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183214, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 177183209}
     - target: {fileID: 2267942419165183214, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: enemyClassObj
       value: 

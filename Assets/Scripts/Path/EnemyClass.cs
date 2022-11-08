@@ -7,35 +7,35 @@ public class EnemyClass : MonoBehaviour
     [System.Serializable]
     public struct DefineEnemyClass
     {
+        [Tooltip("Enemy prefab in scene")]
+        public GameObject enemyObject;
+        [Tooltip("Enemy speed")]
+        public float enemySpeed;
         [Tooltip("Array of Times for enemy waves (in seconds)")]
         public float[] spawnTime;
         [Tooltip("Lenght of wave (in seconds)")]
-        public float wavetime; //wavetime
+        public float waveLength; //wavetime
+        [Tooltip("Start time of 1st Wave (In seconds)")]
+        public float waveStart;
+        [Tooltip("Interval between enemy spawn in a single Wave (in seconds)")]
+        public float spawnInterval;
         [Tooltip("Position of spawn point (in Vector3)")]
-        public Vector3 spawn_pos;
-        [Tooltip("Enemy prefab in scene")]
-        public GameObject enemy;
-        [Tooltip("Enemy speed")]
-        public float speed;
-        [Tooltip("Array of Enemy Path (Drop in EmptyObjects for path)")]
+        public Vector3 spawnPosition;
+        [Tooltip("Array of Enemy Path (Drop in EmptyObjects for path points)")]
         public Transform[] pathTarget;
-        [Tooltip("Set it to 1")]
-        public float spawn_interval;
-        [Tooltip("Set it to 1")]
-        public float wave_interval;
 
-        public DefineEnemyClass(float[] spawnTime, float wavetime, Vector3 spawn_pos, 
-                                GameObject enemy, float speed, Transform[] pathTarget, 
-                                float spawn_interval, float wave_interval)
+        public DefineEnemyClass(float[] spawnTime, float waveLength, Vector3 spawnPosition, 
+                                GameObject enemyObject, float enemySpeed, Transform[] pathTarget, 
+                                float waveStart, float spawnInterval)
         {
             this.spawnTime = spawnTime;
-            this.wavetime = wavetime;
-            this.spawn_pos = spawn_pos;
-            this.enemy = enemy;
+            this.waveLength = waveLength;
+            this.spawnPosition = spawnPosition;
+            this.enemyObject = enemyObject;
             this.pathTarget = pathTarget;
-            this.speed = speed;
-            this.spawn_interval = spawn_interval;
-            this.wave_interval = wave_interval;
+            this.enemySpeed = enemySpeed;
+            this.waveStart = waveStart;
+            this.spawnInterval = spawnInterval;
         }
     }
 
@@ -49,27 +49,27 @@ public class EnemyClass : MonoBehaviour
 
     public float GetWaveTime()
     {
-        return EnemyClass001.wavetime;
+        return EnemyClass001.waveLength;
     }
 
     public Vector3 GetSpawnPos()
     {
-        return EnemyClass001.spawn_pos;
+        return EnemyClass001.spawnPosition;
     }
 
     public GameObject GetEnemy()
     {
-        return EnemyClass001.enemy;
+        return EnemyClass001.enemyObject;
     }
 
     public float GetSpawnInterval()
     {
-        return EnemyClass001.spawn_interval;
+        return EnemyClass001.waveStart;
     }
 
     public float GetWaveInterval()
     {
-        return EnemyClass001.wave_interval;
+        return EnemyClass001.spawnInterval;
     }
 
     public Transform[] GetPathTarget()
@@ -79,7 +79,7 @@ public class EnemyClass : MonoBehaviour
 
     public float GetSpeed()
     {
-        return EnemyClass001.speed;
+        return EnemyClass001.enemySpeed;
     }
 
     // Start is called before the first frame update
