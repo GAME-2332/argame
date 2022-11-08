@@ -6,24 +6,26 @@ namespace XR {
     public abstract class Interaction : MonoBehaviour {
         public Outline.Mode outlineMode = Outline.Mode.OutlineAndSilhouette;
         public Color outlineColor = Color.yellow;
-        public float outlineWidth = 3f;
+        public float outlineWidth = 8f;
         
         private Outline _outline;
         private bool _outlineEnabled;
-        
-        private void Start() {
-            if (_outline == null) {
-                _outline = gameObject.AddComponent<Outline>();
+
+        private void Awake() {
+            _outline = gameObject.AddComponent<Outline>();
+        }
+
+        private void Update() {
+            if (!_outlineEnabled) _outline.enabled = false;
+        }
+
+        public void SetOutline(bool value) {
+            if (value) {
                 _outline.OutlineMode = outlineMode;
                 _outline.OutlineColor = outlineColor;
                 _outline.OutlineWidth = outlineWidth;
             }
-            
-            SetOutline(false);
-        }
-
-        public void SetOutline(bool value) {
-            _outline.enabled = _outlineEnabled = value;
+            _outline.enabled = value;
         }
 
         public abstract void Interact();
