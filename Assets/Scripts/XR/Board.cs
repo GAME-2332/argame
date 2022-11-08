@@ -15,7 +15,7 @@ namespace XR {
             if (Instance == null) {
                 if (_prefab == null) _prefab = Resources.Load("Prefabs/Game Board") as GameObject;
                 Instance = Instantiate(_prefab).GetComponent<Board>();
-                Instance.transform.localScale = new Vector3(.05f, .05f, .05f);
+                Instance.transform.localScale = new Vector3(.1f, .1f, .1f);
             }
             return Instance;
         }

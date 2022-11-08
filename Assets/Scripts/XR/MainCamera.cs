@@ -37,11 +37,14 @@ namespace XR {
 
             if (GameManager.GameState.IsPlaying() && Input.touchCount >= 1) {
                 var touch = Input.GetTouch(0);
-                if (_hovered != null) {
-                    ClearSelected();
-                    _hovered.Interact();
-                } else {
-                    ClearSelected();
+                if (touch.phase == TouchPhase.Began) {
+                    if (_hovered != null) {
+                        ClearSelected();
+                        _hovered.Interact();
+                    }
+                    else {
+                        ClearSelected();
+                    }
                 }
             }
         }
