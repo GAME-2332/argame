@@ -1,4 +1,6 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using DefaultNamespace;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace XR {
@@ -9,6 +11,7 @@ namespace XR {
         private Transform _transform;
         private Camera _camera;
         private Interaction _hovered;
+        private SelectableInteraction _selected;
         
         private void Start() {
             _transform = transform;
@@ -19,22 +22,49 @@ namespace XR {
         }
 
         private void Update() {
-            if (!GameManager.GameState.IsPlaying()) return;
+            if (!GameManager.GameState.IsTracking()) return;
             
             RaycastHit hit;
             if (Physics.Raycast(_transform.position, _transform.forward, out hit)) {
                 Interaction hitInteraction = hit.transform.GetComponent<Interaction>();
                 if (_hovered != null) _hovered.SetOutline(false);
                 _hovered = hitInteraction;
-                if (_hovered != null) _hovered.SetOutline(true);
+                _hovered.SetOutline(true);
             } else {
                 if (_hovered != null) _hovered.SetOutline(false);
                 _hovered = null;
             }
 
-            if (_hovered != null) {
-                // TODO: Interaction code
+            if (GameManager.GameState.IsPlaying() && Input.touchCount >= 1) {
+                var touch = Input.GetTouch(0);
+                if (_hovered != null) {
+                    ClearSelected();
+                    _hovered.Interact();
+                } else {
+                    ClearSelected();
+                }
             }
+        }
+
+        public void IfSelected(Action<SelectableInteraction> action) {
+            if (_selected != null) action.Invoke(_selected);
+        }
+
+        [CanBeNull]
+        public SelectableInteraction GetSelected() {
+            return _selected;
+        }
+
+        public void SetSelected(SelectableInteraction interaction) {
+            if (_selected != null) _selected.SetOutline(false);
+            _selected = interaction;
+            
+            _selected.SetOutline(true);
+        }
+
+        public void ClearSelected() {
+            if (_selected != null) _selected.SetOutline(false);
+            _selected = null;
         }
     }
 }
