@@ -6,11 +6,8 @@ namespace XR {
         private Outline _outline;
         private bool _outlineEnabled;
 
-        private void Start() {
-            _outline = GetComponent<Outline>();
-        }
-
         private void Update() {
+            if (_outline == null) _outline = GetComponent<Outline>();
             if (_outline.enabled != _outlineEnabled) _outline.enabled = _outlineEnabled;
         }
 
