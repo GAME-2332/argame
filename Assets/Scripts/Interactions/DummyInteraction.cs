@@ -11,7 +11,7 @@ namespace DefaultNamespace {
         }
         
         public override void Interact() {
-            _rigidbody.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            _rigidbody.AddForce(Vector3.up * .5f, ForceMode.Impulse);
         }
     }
 }
