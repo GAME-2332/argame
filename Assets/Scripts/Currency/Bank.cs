@@ -10,10 +10,11 @@ public class Bank : MonoBehaviour
     TMPro.TMP_Text BankText;
 
     [SerializeField]
-    static int currentAmount;
+     int currentAmount;
     // Start is called before the first frame update
     void Start()
     {
+     
         LoadCoins();
         if(BankText == null)
         {
@@ -32,7 +33,7 @@ public class Bank : MonoBehaviour
     }
     void LoadCoins()
     {
-        currentAmount = 0;
+      
         //if there is data on coins.
     }
     // Update is called once per frame
@@ -48,8 +49,14 @@ public class Bank : MonoBehaviour
 
     }
 
+    public int GetAmount()
+    {
+        return currentAmount;
+    }
+
     void SubtractCoins(int CoinsToSubtract)
     {
-
+        currentAmount -= CoinsToSubtract;
+        BankText.text = currentAmount.ToString() + " Coins";
     }
 }

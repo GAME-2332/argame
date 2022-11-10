@@ -6,6 +6,7 @@ using UnityEngine;
 public class TowerSO : ScriptableObject
 {
     public string TowerName;
+    public string Description;
     public Sprite Tower2dImage;
     public int TowerHP;
     public int TowerAttackDamage;
