@@ -13,7 +13,7 @@ public class Turrent : MonoBehaviour
 
     [Header("Audio")] 
      public AudioSource shootAudio;
-    public AudioClip[] soundFX;
+     public AudioClip[] soundFX;
     
     
     

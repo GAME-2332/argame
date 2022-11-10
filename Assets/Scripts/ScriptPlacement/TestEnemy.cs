@@ -16,7 +16,6 @@ public class TestEnemy : MonoBehaviour
    }
 
    private void Die() {
-      AudioSource.PlayClipAtPoint(soundFX, transform.position);
       Destroy(gameObject);
    }
 }
