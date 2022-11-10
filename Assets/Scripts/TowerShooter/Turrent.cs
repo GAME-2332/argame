@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
@@ -32,6 +33,8 @@ public class Turrent : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    public GameObject muzzlePrefab;
     
     
     void Start() {
@@ -89,12 +92,18 @@ public class Turrent : MonoBehaviour
     }
 
     void Shoot() {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+        GameObject muzzleGO = Instantiate(muzzlePrefab, firePoint.position, firePoint.rotation);
+        muzzleGO.transform.parent = firePoint;
+        Destroy(muzzleGO, 0.1f);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         
+        
+        
+        
         //plays shooting sfx
-        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
-        shootAudio.Play();
+        // shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
+        // shootAudio.Play();
         
         if (bullet != null)
             bullet.Seek(target);
