@@ -2,6 +2,7 @@
 using DefaultNamespace;
 using JetBrains.Annotations;
 using UnityEngine;
+using Util;
 
 namespace XR {
     [RequireComponent(typeof(Camera))]
@@ -10,9 +11,12 @@ namespace XR {
 
         private Transform _transform;
         private Camera _camera;
-        private Interaction _hovered;
-        private SelectableInteraction _selected;
-        
+        // private Interaction _hovered;
+        // private SelectableInteraction _selected;
+
+        private readonly Singleton<Interaction> _hovered = new(null, s => s.SetOutline(true), s => s.SetOutline(false));
+        private readonly Singleton<SelectableInteraction> _selected = new(null, s => s.SetOutline(true), s => s.SetOutline(false));
+
         private void Start() {
             _transform = transform;
             _camera = GetComponent<Camera>();
@@ -27,12 +31,9 @@ namespace XR {
             RaycastHit hit;
             if (Physics.Raycast(_transform.position, _transform.forward, out hit)) {
                 Interaction hitInteraction = hit.transform.GetComponent<Interaction>();
-                if (_hovered != null) _hovered.SetOutline(false);
-                _hovered = hitInteraction;
-                _hovered.SetOutline(true);
+                _hovered.Set(hitInteraction);
             } else {
-                if (_hovered != null) _hovered.SetOutline(false);
-                _hovered = null;
+                _hovered.Clear();
             }
 
             if (GameManager.GameState.IsPlaying() && Input.touchCount >= 1) {
@@ -40,34 +41,28 @@ namespace XR {
                 if (touch.phase == TouchPhase.Began) {
                     if (_hovered != null) {
                         ClearSelected();
-                        _hovered.Interact();
+                        _hovered.Get().Interact();
                     }
-                    else {
-                        ClearSelected();
-                    }
+                    else ClearSelected();
                 }
             }
         }
 
         public void IfSelected(Action<SelectableInteraction> action) {
-            if (_selected != null) action.Invoke(_selected);
+            _selected.IfPresent(action);
         }
 
         [CanBeNull]
         public SelectableInteraction GetSelected() {
-            return _selected;
+            return _selected.Value;
         }
 
         public void SetSelected(SelectableInteraction interaction) {
-            if (_selected != null) _selected.SetOutline(false);
-            _selected = interaction;
-            
-            _selected.SetOutline(true);
+            _selected.Set(interaction);
         }
 
         public void ClearSelected() {
-            if (_selected != null) _selected.SetOutline(false);
-            _selected = null;
+            _selected.Clear();
         }
     }
 }
