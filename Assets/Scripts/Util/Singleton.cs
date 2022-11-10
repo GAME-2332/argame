@@ -19,7 +19,6 @@ namespace Util {
             }
         }
         
-        
         [SerializeField] private T value;
         private readonly T _defaultValue;
         private Action<T> _onSet;
