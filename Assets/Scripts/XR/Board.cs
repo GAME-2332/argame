@@ -43,7 +43,11 @@ namespace XR {
         public static void ClearFollowOffset() {
             _followOffset = Vector3.zero;
         }
-        
+
+        public static void LoadLevel(int level) {
+            // TODO: Stub
+        }
+
         private void Start() {
             if (Instance != null && Instance != this) Destroy(Instance.gameObject);
             Instance = this;
