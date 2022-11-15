@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy_Spwaner : MonoBehaviour
 {
-    [Tooltip("Enemy prefab in scene")]
-    public EnemyClass enemyPrefab;
-
+    [Tooltip("SpawnerDataPath in scene")]
+    public EnemyClass SpawnerData;
+    [Tooltip("Preafab from folder")]
     public Path_Enemy enemyPath;
 
     private float[] SpawnTime;
@@ -34,15 +34,15 @@ public class Enemy_Spwaner : MonoBehaviour
         bTimer = true;
         timerCount = 0;
 
-        SpawnTime = enemyPrefab.GetSpawnTime();
-        wavetime = enemyPrefab.GetWaveTime();
-        enemyObject = enemyPrefab.GetEnemy();
-        spawnPosition = enemyPrefab.GetSpawnPos();
-        waveStart = enemyPrefab.GetSpawnInterval();
-        spawnInterval = enemyPrefab.GetWaveInterval();
+        SpawnTime = SpawnerData.GetSpawnTime();
+        wavetime = SpawnerData.GetWaveTime();
+        enemyObject = SpawnerData.GetEnemy();
+        spawnPosition = SpawnerData.GetSpawnPos();
+        waveStart = SpawnerData.GetSpawnInterval();
+        spawnInterval = SpawnerData.GetWaveInterval();
 
-        enemyPath.SetSpeed(enemyPrefab.GetSpeed());
-        enemyPath.SetTargetpath(enemyPrefab.GetPathTarget());
+        enemyPath.SetSpeed(SpawnerData.GetSpeed());
+        enemyPath.SetTargetpath(SpawnerData.GetPathTarget());
 
         SpawnRepeater();
     }

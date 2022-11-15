@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2267942419165183209}
   - component: {fileID: 2267942419165183214}
+  - component: {fileID: 558059670}
   m_Layer: 0
   m_Name: SpawnerDataPath
   m_TagString: Untagged
@@ -44,4 +45,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbf4175c1cf18f4d8741a18585be6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyClassObj: {fileID: 0}
+  SpawnerData: {fileID: 0}
+  enemyPath: {fileID: 319512188817877918, guid: d080d8d33c6cc504aa4e850d0f47db29, type: 3}
+--- !u!114 &558059670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267942419165183215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd9cf9130aebb44795a759566ba9ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObject: {fileID: 780215142629512931, guid: d080d8d33c6cc504aa4e850d0f47db29, type: 3}
+  enemySpeed: 3
+  spawnTime:
+  - 2
+  - 15
+  - 25
+  - 40
+  waveLength: 4
+  waveStart: 0.5
+  spawnInterval: 0.5
+  spawnPosition: {x: -16, y: 0.5, z: 0}
+  pathTarget:
+  - {fileID: 0}
+  - {fileID: 0}
