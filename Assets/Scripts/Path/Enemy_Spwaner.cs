@@ -7,6 +7,7 @@ public class Enemy_Spwaner : MonoBehaviour
     [Tooltip("Enemy prefab in scene")]
     public EnemyClass enemyPrefab;
 
+    public Path_Enemy enemyPath;
 
     private float[] SpawnTime;
 
@@ -27,6 +28,9 @@ public class Enemy_Spwaner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //enemyPath = new Path_Enemy();
+        //enemyPath = GetComponent<Path_Enemy>();
+
         bTimer = true;
         timerCount = 0;
 
@@ -37,6 +41,8 @@ public class Enemy_Spwaner : MonoBehaviour
         waveStart = enemyPrefab.GetSpawnInterval();
         spawnInterval = enemyPrefab.GetWaveInterval();
 
+        enemyPath.SetSpeed(enemyPrefab.GetSpeed());
+        enemyPath.SetTargetpath(enemyPrefab.GetPathTarget());
 
         SpawnRepeater();
     }
@@ -55,6 +61,7 @@ public class Enemy_Spwaner : MonoBehaviour
             if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime)
             {
                 Instantiate(enemyObject, spawnPosition, Quaternion.identity);
+                
             }
         }
     }
