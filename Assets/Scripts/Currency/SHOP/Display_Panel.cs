@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
+using XR;
 
 namespace TowerShop
 {
@@ -203,6 +204,15 @@ namespace TowerShop
                 CheckReferences();
                 playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
                 SetUpCost(CurrentTowerToDisplay.TowerCost);
+
+                var selected = MainCamera.Instance.GetSelected();
+                if (selected is TowerSpawnPoint)
+                {
+                    MainCamera.Instance.ClearSelected();
+                    TowerSpawnPoint tower = selected as TowerSpawnPoint;
+                    // Spawn tower
+                }
+
                 GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
             }
            

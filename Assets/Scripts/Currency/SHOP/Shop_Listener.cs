@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 public class Shop_Listener : MonoBehaviour
@@ -31,7 +28,7 @@ public class Shop_Listener : MonoBehaviour
         }
     }
 
-    void SummonShop()
+    public void SummonShop()
     {
         if(shopExists == false)
         {

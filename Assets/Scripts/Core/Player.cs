@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using XR;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class Player : MonoBehaviour
     int currenthealth;
     [SerializeField]
     HealthBar healthbar;
+
+    [SerializeField]
+    SceneReference ReturnToMain;
 
     // Start is called before the first frame update
     void Start()
@@ -54,5 +59,6 @@ public class Player : MonoBehaviour
     {
         GameObject.Destroy(this.gameObject);
         //return to start menu.
+        SceneManager.LoadScene(ReturnToMain);
     }
 }
