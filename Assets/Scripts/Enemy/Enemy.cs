@@ -31,6 +31,8 @@ public class Enemy : MonoBehaviour {
     NumbersCanvas NUMBERSCANVAS;
     Player player; //is referenced when we collide with player and continue to attack it.
 
+    public delegate void AddCoins(int amount);
+    public static event AddCoins OnAddCoins;
     private void Start()
     {
         if(enemyinfo != null)
@@ -163,6 +165,7 @@ public class Enemy : MonoBehaviour {
         Debug.Log("I drop.." + coinsDropped);
         NUMBERSCANVAS.CreateCoinText(this.transform, coinsDropped);
         //now you die after dropping the coins.
+        OnAddCoins(coinsDropped);
         GameObject.Destroy(this.gameObject);
     }
 }
