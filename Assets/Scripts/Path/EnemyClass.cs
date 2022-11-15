@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyClass : MonoBehaviour
 {
-    [System.Serializable]
+    /*[System.Serializable]
     public struct DefineEnemyClass
-    {
+    {*/
         [Tooltip("Enemy prefab in scene")]
         public GameObject enemyObject;
         [Tooltip("Enemy speed")]
@@ -24,7 +24,7 @@ public class EnemyClass : MonoBehaviour
         [Tooltip("Array of Enemy Path (Drop in EmptyObjects for path points)")]
         public Transform[] pathTarget;
 
-        public DefineEnemyClass(float[] spawnTime, float waveLength, Vector3 spawnPosition, 
+        /*public DefineEnemyClass(float[] spawnTime, float waveLength, Vector3 spawnPosition, 
                                 GameObject enemyObject, float enemySpeed, Transform[] pathTarget, 
                                 float waveStart, float spawnInterval)
         {
@@ -40,46 +40,47 @@ public class EnemyClass : MonoBehaviour
     }
 
     [SerializeField]
-    DefineEnemyClass EnemyClass001;
+    DefineEnemyClass EnemyClass001;*/
 
     public float[] GetSpawnTime()
     {
-        return EnemyClass001.spawnTime;
+        return spawnTime;
+        //return EnemyClass001.spawnTime;
     }
 
     public float GetWaveTime()
     {
-        return EnemyClass001.waveLength;
+        return waveLength;
     }
 
     public Vector3 GetSpawnPos()
     {
-        return EnemyClass001.spawnPosition;
+        return spawnPosition;
     }
 
     public GameObject GetEnemy()
     {
-        return EnemyClass001.enemyObject;
+        return enemyObject;
     }
 
     public float GetSpawnInterval()
     {
-        return EnemyClass001.waveStart;
+        return waveStart;
     }
 
     public float GetWaveInterval()
     {
-        return EnemyClass001.spawnInterval;
+        return spawnInterval;
     }
 
     public Transform[] GetPathTarget()
     {
-        return EnemyClass001.pathTarget;
+        return pathTarget;
     }
 
     public float GetSpeed()
     {
-        return EnemyClass001.enemySpeed;
+        return enemySpeed;
     }
 
     // Start is called before the first frame update

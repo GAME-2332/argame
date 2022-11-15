@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy_Spwaner : MonoBehaviour
 {
-    [Tooltip("Enemy prefab in scene")]
-    public EnemyClass enemyPrefab;
-
+    [Tooltip("SpawnerDataPath in scene")]
+    public EnemyClass SpawnerData;
+    [Tooltip("Preafab from folder")]
+    public Path_Enemy enemyPath;
 
     private float[] SpawnTime;
 
@@ -27,16 +28,18 @@ public class Enemy_Spwaner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //enemyPath = new Path_Enemy();
+        //enemyPath = GetComponent<Path_Enemy>();
+
         bTimer = true;
         timerCount = 0;
 
-        SpawnTime = enemyPrefab.GetSpawnTime();
-        wavetime = enemyPrefab.GetWaveTime();
-        enemyObject = enemyPrefab.GetEnemy();
-        spawnPosition = enemyPrefab.GetSpawnPos();
-        waveStart = enemyPrefab.GetSpawnInterval();
-        spawnInterval = enemyPrefab.GetWaveInterval();
-
+        SpawnTime = SpawnerData.GetSpawnTime();
+        wavetime = SpawnerData.GetWaveTime();
+        enemyObject = SpawnerData.GetEnemy();
+        spawnPosition = SpawnerData.GetSpawnPos();
+        waveStart = SpawnerData.GetSpawnInterval();
+        spawnInterval = SpawnerData.GetWaveInterval();
 
         SpawnRepeater();
     }
@@ -50,11 +53,14 @@ public class Enemy_Spwaner : MonoBehaviour
 
     void EnemySpawner()
     {
-        for (int i = 0; i <= SpawnTime.Length; i++)
+        for (int i = 0; i < SpawnTime.Length; i++)
         {
             if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime)
             {
-                Instantiate(enemyObject, spawnPosition, Quaternion.identity);
+                Path_Enemy enemy = Instantiate(enemyObject, spawnPosition, Quaternion.identity).GetComponent<Path_Enemy>();
+
+                enemy.SetSpeed(SpawnerData.GetSpeed());
+                enemy.SetTargetpath(SpawnerData.GetPathTarget());
             }
         }
     }
