@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene_Level_Tutorial_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6121164009847060152, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7bc427e1c70a5f4294deeccd7671f3a, type: 2}
     - target: {fileID: 9043789757467634214, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
       propertyPath: m_RootOrder
       value: 0
