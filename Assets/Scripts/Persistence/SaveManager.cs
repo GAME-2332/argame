@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using Util;
 
 namespace Persistence {
     public class SaveManager {
+        private static readonly List<IRuntimeSerialized> _externals = new();
+        
         public static string Path() {
             return Application.persistentDataPath + "/save_data";
+        }
+        
+        /// <summary>
+        /// Registers a non-monobehaviour object to be serialized. Call in your static initializer.
+        /// </summary>
+        public static void RegisterSerializedExternal(IRuntimeSerialized obj) {
+            _externals.Add(obj);
         }
 
         public static void SerializeAll() {
@@ -40,14 +45,9 @@ namespace Persistence {
                     list.Add(obj as IRuntimeSerialized);
                 }
             }
-            list.AddRange(CollectExternals());
-            return list;
-        }
 
-        private static IEnumerable<IRuntimeSerialized> CollectExternals() {
-            return
-                from field in Reflection.GetStaticFieldsWithAttribute<IRuntimeSerialized>(typeof(SerializeStaticAttribute))
-                select field.Value;
+            list.AddRange(_externals);
+            return list;
         }
     }
 }
