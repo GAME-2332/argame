@@ -27,7 +27,7 @@ namespace Util {
             return
                 from type in assembly.GetTypes()
                 from field in type.GetFields(BindingFlags.Static)
-                where field.FieldType == typeof(T)
+                where typeof(T).IsAssignableFrom(field.FieldType)
                 let attributes = field.GetCustomAttributes(attributeType, true)
                 where attributes != null && attributes.Length > 0
                 select new StaticField<T>(field);
