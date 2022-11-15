@@ -9,7 +9,7 @@ public class StartButton : MonoBehaviour
 {
 
     [SerializeField]
-    string NextScene;
+    SceneReference SceneToStart;
 
     [SerializeField]
     Button _button;

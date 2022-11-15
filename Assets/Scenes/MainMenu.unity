@@ -419,7 +419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff898df69e0364a94080e6f62ed777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: 
+  SceneToStart:
+    sceneAsset: {fileID: 102900000, guid: bafa346e309917a4eb3c5d539b6e7e22, type: 3}
+    scenePath: Assets/Scenes/DevScene.unity
   _button: {fileID: 0}
 --- !u!1 &469270347
 GameObject:
