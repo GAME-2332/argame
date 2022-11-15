@@ -4893,7 +4893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3994341888649186259}
   m_Layer: 0
-  m_Name: Scene_Level_6
+  m_Name: Scene_Level_6_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2759,7 +2759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2486712768614884811}
   m_Layer: 0
-  m_Name: Scene_Level_7
+  m_Name: Scene_Level_7_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
