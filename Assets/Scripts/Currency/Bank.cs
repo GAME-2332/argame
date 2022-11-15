@@ -33,12 +33,16 @@ public class Bank : MonoBehaviour
     }
     void LoadCoins()
     {
-      
+        if (BankText == null)
+        {
+            BankText = GetComponent<TMPro.TMP_Text>();
+        }
+        BankText.text = currentAmount.ToString() + " Coins";
         //if there is data on coins.
     }
     // Update is called once per frame
 
-    void AddCoins(int CoinsToAdd)
+    public void AddCoins(int CoinsToAdd)
     {
         if (BankText == null)
         {
@@ -54,7 +58,7 @@ public class Bank : MonoBehaviour
         return currentAmount;
     }
 
-    void SubtractCoins(int CoinsToSubtract)
+    public void SubtractCoins(int CoinsToSubtract)
     {
         currentAmount -= CoinsToSubtract;
         BankText.text = currentAmount.ToString() + " Coins";

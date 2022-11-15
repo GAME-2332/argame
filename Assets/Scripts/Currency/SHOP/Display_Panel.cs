@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -153,6 +154,7 @@ namespace TowerShop
 
         public void DisplayByTowerInfo(TowerSO _info)
         {
+            CurrentTowerToDisplay = _info;
             CheckReferences();
             image.enabled = true;
             image.color = Color.white;
@@ -192,7 +194,19 @@ namespace TowerShop
         }
         void BuyThis()
         {
-
+            if(CurrentTowerToDisplay == null)
+            {
+                //do nothing with buy button
+            }
+            else
+            {
+                CheckReferences();
+                playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
+                SetUpCost(CurrentTowerToDisplay.TowerCost);
+                GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
+            }
+           
+            //close the shop.
         }
     }
 
