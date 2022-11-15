@@ -53,5 +53,6 @@ public class Player : MonoBehaviour
     public void Die()
     {
         GameObject.Destroy(this.gameObject);
+        //return to start menu.
     }
 }
