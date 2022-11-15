@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbf4175c1cf18f4d8741a18585be6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerData: {fileID: 0}
+  SpawnerData: {fileID: 558059670}
   enemyPath: {fileID: 319512188817877918, guid: d080d8d33c6cc504aa4e850d0f47db29, type: 3}
 --- !u!114 &558059670
 MonoBehaviour:
@@ -69,7 +69,8 @@ MonoBehaviour:
   waveLength: 4
   waveStart: 0.5
   spawnInterval: 0.5
-  spawnPosition: {x: -16, y: 0.5, z: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
   pathTarget:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
