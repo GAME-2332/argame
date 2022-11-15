@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
          transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget(){
+    void HitTarget() {
         GameObject effectIns = (GameObject)Instantiate(impactFX, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         //The bullet looks for a component that has the enemy script, finds a method for taking damage (could be anything you call it ex. enemyDamage etc.
