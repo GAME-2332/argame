@@ -44,7 +44,7 @@ public class Shop_Listener : MonoBehaviour
 
     public void CloseShop()
     {
-        if(shopExists == true)
+        if(shopExists == true || shoppointer != null)
         {
             GameManager.GameState = GameState.Playing;
             shopExists = false;

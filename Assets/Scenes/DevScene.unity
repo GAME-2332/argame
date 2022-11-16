@@ -598,6 +598,10 @@ PrefabInstance:
       propertyPath: m_fontSizeMax
       value: 26.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1071288960646397585, guid: 8bacbdfd34ef634478bccbe3f84222aa, type: 3}
+      propertyPath: currentAmount
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 1071288961143219522, guid: 8bacbdfd34ef634478bccbe3f84222aa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
