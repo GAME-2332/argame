@@ -6,6 +6,7 @@ namespace XR {
         private static GameObject _prefab;
         private static Transform _followTarget;
         private static Vector3 _followOffset = Vector3.zero;
+        private static GameObject _level;
         
         public static Board Instance { get; private set; }
 
@@ -45,7 +46,10 @@ namespace XR {
         }
 
         public static void LoadLevel(int level) {
-            // TODO: Stub
+            if (_level != null) GameObject.Destroy(_level);
+
+            GameObject levelPrefab = Resources.Load<GameObject>("Scene_Level_" + level);
+            _level = Instantiate(levelPrefab, GetOrCreate().transform);
         }
 
         private void Start() {
@@ -53,6 +57,9 @@ namespace XR {
             Instance = this;
             
             _transform = transform;
+            
+            // Debug
+            LoadLevel(0);
         }
 
         private void Update() {
