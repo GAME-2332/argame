@@ -26,6 +26,8 @@ namespace XR {
             
             Board.LoadLevel(level);
             _level = level;
+            // Deserialize again in case new objects have been created upon level load that need deserialization
+            SaveManager.DeserializeAll();
         }
     }
 }
