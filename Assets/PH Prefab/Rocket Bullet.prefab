@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5841fe32d73e9419d0f97906a615ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletdamage: 10
+  Bulletdamage: 20
   speed: 40
   impactFX: {fileID: 5827340625473055669, guid: b99c62c8a9d3f2944a20c41e9aa09ff1, type: 3}
 --- !u!54 &468715818433590869
