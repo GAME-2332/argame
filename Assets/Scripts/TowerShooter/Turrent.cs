@@ -70,12 +70,13 @@ public class Turrent : MonoBehaviour
             return;
         
            //Target Lock on
-           Vector3 direction = target.position - transform.position;
-           Quaternion lookRotate = Quaternion.LookRotation(direction);
+           // Vector3 direction = target.position - transform.position;
+           // Quaternion lookRotate = Quaternion.LookRotation(direction);
            //When turrent looks at new enemy, it smoothly turns to the new enemy, instead of snapping 
-           Vector3 rotation = Quaternion.Lerp(turrentBase.rotation, lookRotate, Time.deltaTime * turrentSpeed).eulerAngles;
+           // Vector3 rotation = Quaternion.Lerp(turrentBase.rotation, lookRotate, Time.deltaTime * turrentSpeed).eulerAngles;
            //this actually turns the turrent
-           turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+           // turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+           turrentBase.LookAt(target);
 
            if (fireCountdown <= 0f)
            {
@@ -93,8 +94,8 @@ public class Turrent : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         
         //plays shooting sfx
-        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
-        shootAudio.Play();
+        // shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
+        // shootAudio.Play();
         
         if (bullet != null)
             bullet.Seek(target);
