@@ -134,6 +134,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene_Level_Tutorial_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3476166518371021710, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.679
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476166518371021710, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476166518371021710, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7892088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476166518371021710, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.61412495
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476166518371021710, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 75.777
+      objectReference: {fileID: 0}
     - target: {fileID: 6121164009847060152, guid: 6cd801359e42bd44490a6f96abf3c373, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
