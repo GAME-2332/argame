@@ -7,12 +7,6 @@ using XR;
 
 public class TowerSpawnPoint : SelectableInteraction
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
-
     public void SetNewTower()
     {
         var selected = MainCamera.Instance.GetSelected();
@@ -30,11 +24,5 @@ public class TowerSpawnPoint : SelectableInteraction
         // Open shop
         GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().SummonShop();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
