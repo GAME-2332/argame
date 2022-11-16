@@ -1,4 +1,5 @@
 using UnityEngine;
+using XR;
 
 public class Shop_Listener : MonoBehaviour
 {
@@ -28,17 +29,16 @@ public class Shop_Listener : MonoBehaviour
         }
     }
 
-    public void SummonShop()
-    {
-        if(shopExists == false)
-        {
-
-            shopExists = true;
-            shoppointer = Instantiate(shopwindow, transform.parent.parent);
-        }
-        else
-        {
-            CloseShop();
+    public void SummonShop() {
+        if (GameManager.GameState.IsPlaying()) {
+            if (shopExists == false) {
+                GameManager.GameState = GameState.Shop;
+                shopExists = true;
+                shoppointer = Instantiate(shopwindow, transform.parent.parent);
+            }
+            else {
+                CloseShop();
+            }
         }
     }
 
@@ -46,6 +46,7 @@ public class Shop_Listener : MonoBehaviour
     {
         if(shopExists == true)
         {
+            GameManager.GameState = GameState.Playing;
             shopExists = false;
             GameObject.Destroy(shoppointer.gameObject);
         }
