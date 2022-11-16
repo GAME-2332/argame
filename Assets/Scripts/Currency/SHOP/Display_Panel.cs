@@ -211,7 +211,7 @@ namespace TowerShop
                     MainCamera.Instance.ClearSelected();
                     TowerSpawnPoint tower = selected as TowerSpawnPoint;
                     // Spawn tower
-                    GameObject newTower = Instantiate(CurrentTowerToDisplay.TowerPrefab);
+                    GameObject newTower = Instantiate(CurrentTowerToDisplay.TowerPrefab, tower.transform);
                     newTower.transform.localPosition = Vector3.up * .5f;
                 }
 

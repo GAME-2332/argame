@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 780215142629512931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 319512189849085024}
@@ -155,7 +155,7 @@ MonoBehaviour:
   enemyClassObj: {fileID: 0}
   pathTarget: []
   CurrentPosition: 0
-  Speed: 3
+  Speed: 0.05
 --- !u!1001 &2609451628410170279
 PrefabInstance:
   m_ObjectHideFlags: 0
