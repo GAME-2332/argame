@@ -201,16 +201,18 @@ namespace TowerShop
             }
             else
             {
-                CheckReferences();
-                playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
-                SetUpCost(CurrentTowerToDisplay.TowerCost);
 
                 var selected = MainCamera.Instance.GetSelected();
                 if (selected is TowerSpawnPoint)
                 {
+                    CheckReferences();
+                    playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
+                    SetUpCost(CurrentTowerToDisplay.TowerCost);
                     MainCamera.Instance.ClearSelected();
                     TowerSpawnPoint tower = selected as TowerSpawnPoint;
                     // Spawn tower
+                    GameObject newTower = Instantiate(CurrentTowerToDisplay.TowerPrefab);
+                    newTower.transform.localPosition = Vector3.up * .5f;
                 }
 
                 GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
