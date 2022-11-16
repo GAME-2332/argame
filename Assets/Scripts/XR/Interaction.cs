@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Util;
 
 namespace XR {
     [RequireComponent(typeof(Collider), typeof(Renderer), typeof(Outline))]
@@ -12,7 +13,7 @@ namespace XR {
         }
 
         public void SetOutline(bool value) {
-            _outline.enabled = _outlineEnabled = value;
+            _outlineEnabled = value;
         }
 
         public abstract void Interact();
