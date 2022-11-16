@@ -90,6 +90,8 @@ public class Enemy : MonoBehaviour {
             player = collision.gameObject.GetComponent<Player>();
             isAttacking = true;
             StartCoroutine("Attacking");
+            // destory this gameobject 
+            GameObject.Destroy(this.gameObject);
         }
     }
 
