@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "NewTowerSO", menuName = "ScriptableObjects/TowerSO", order = 1)]
 
@@ -13,6 +11,6 @@ public class TowerSO : ScriptableObject
     public float TowerAttackSpeed;
     public float TowerRange;
     public int TowerCost;
-    public string TowerPrefabPath;
+    public GameObject TowerPrefab;
 
 }

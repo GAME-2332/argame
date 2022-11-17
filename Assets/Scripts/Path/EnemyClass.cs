@@ -19,8 +19,8 @@ public class EnemyClass : MonoBehaviour
         public float waveStart;
         [Tooltip("Interval between enemy spawn in a single Wave (in seconds)")]
         public float spawnInterval;
-        [Tooltip("Position of spawn point (in Vector3)")]
-        public Vector3 spawnPosition;
+        [Tooltip("Spawn point")]
+        public Transform spawnTransform;
         [Tooltip("Array of Enemy Path (Drop in EmptyObjects for path points)")]
         public Transform[] pathTarget;
 
@@ -53,9 +53,8 @@ public class EnemyClass : MonoBehaviour
         return waveLength;
     }
 
-    public Vector3 GetSpawnPos()
-    {
-        return spawnPosition;
+    public Transform getSpawnTransform() {
+        return spawnTransform;
     }
 
     public GameObject GetEnemy()
