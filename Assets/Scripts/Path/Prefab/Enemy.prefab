@@ -130,10 +130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyname: 
-  coinsDropped: 0
+  coinsDropped: 20
   damage: 200
-  currenthealth: 0
-  maxHealth: 0
+  currenthealth: 25
+  maxHealth: 25
   speed: 0
   attackspeed: 0
   enemyinfo: {fileID: 11400000, guid: cc00978923536734fb530c54f6c20162, type: 2}
