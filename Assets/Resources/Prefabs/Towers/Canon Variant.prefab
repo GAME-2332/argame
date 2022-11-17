@@ -304,7 +304,7 @@ MonoBehaviour:
   shootAudio: {fileID: 0}
   soundFX: []
   range: 3
-  fireRate: 1
+  fireRate: 0.33
   enemyTag: Enemy
   turrentBase: {fileID: 368569414}
   turrentSpeed: 10

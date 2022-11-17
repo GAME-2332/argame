@@ -271,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3567427353416326791, guid: fcbdc0e39e5f3584ca5cdc8333facfd4, type: 3}
       propertyPath: m_Name
-      value: Prefab Base
+      value: Prefab Base Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcbdc0e39e5f3584ca5cdc8333facfd4, type: 3}
@@ -295,7 +295,7 @@ MonoBehaviour:
   shootAudio: {fileID: 0}
   soundFX: []
   range: 4.51
-  fireRate: 5
+  fireRate: 2
   enemyTag: Enemy
   turrentBase: {fileID: 981273095}
   turrentSpeed: 10
