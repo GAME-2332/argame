@@ -213,6 +213,7 @@ namespace TowerShop
                     // Spawn tower
                     GameObject newTower = Instantiate(CurrentTowerToDisplay.TowerPrefab, tower.transform);
                     newTower.transform.localPosition = Vector3.up * .5f;
+                    newTower.transform.localScale = new(1, 20, 1);
                 }
 
                 GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
