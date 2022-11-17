@@ -40,8 +40,8 @@ public class Bullet : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(impactFX, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         //The bullet looks for a component that has the enemy script, finds a method for taking damage (could be anything you call it ex. enemyDamage etc.
-        if (target.GetComponent<TestEnemy>()){
-            target.GetComponent<TestEnemy>().TakeDamage(Bulletdamage);
+        if (target.GetComponent<Enemy>()){
+            target.GetComponent<Enemy>().TakeDamage(Bulletdamage);
         }
         //This destroys the bullet
         Destroy(gameObject);

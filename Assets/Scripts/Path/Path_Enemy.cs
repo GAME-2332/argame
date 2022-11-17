@@ -6,24 +6,43 @@ public class Path_Enemy : MonoBehaviour
 {
     public EnemyClass enemyClassObj;
 
-    private Transform[] pathTarget;
+    public Transform[] pathTarget;
     [SerializeField]
     private int CurrentPosition;
 
-    private float Speed;
+    public float Speed;
 
   
+    public void SetTargetpath(Transform[] pathTargets)
+    {
+        pathTarget = pathTargets;
+    }
+
+    public void SetSpeed(float SpeedE)
+    {
+        Speed = SpeedE;
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         CurrentPosition = 0;
-        pathTarget = enemyClassObj.GetPathTarget();
-        Speed = enemyClassObj.GetSpeed();
+
+        
+        //var enemy = GetComponent<EnemyClass>();
+        //pathTarget = enemy.GetPathTarget();
+        //Speed = enemy.GetSpeed();
+
     }
 
     // Update is called once per frame
     void Update()
+    {
+        FollowPath();
+    }
+
+    public void FollowPath()
     {
         if (transform.position != pathTarget[CurrentPosition].position)
         {
@@ -36,4 +55,6 @@ public class Path_Enemy : MonoBehaviour
             CurrentPosition = (CurrentPosition + 1);
         }
     }
+
+
 }

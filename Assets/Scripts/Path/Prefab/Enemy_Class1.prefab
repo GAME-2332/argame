@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 177183209}
   m_Layer: 0
   m_Name: Enemy_Class1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyClassObj: {fileID: 177183209}
+  pathTarget: []
   CurrentPosition: 0
+  Speed: 0
 --- !u!114 &177183209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,14 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd9cf9130aebb44795a759566ba9ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyClass001:
-    spawnTime:
-    - 5
-    - 15
-    wavetime: 0
-    spawn_pos: {x: 0, y: 0.5, z: -10}
-    enemy: {fileID: 1274889912689098899}
-    speed: 5
-    pathTarget: []
-    spawn_interval: 1
-    wave_interval: 1
+  enemyObject: {fileID: 0}
+  enemySpeed: 0
+  spawnTime: []
+  waveLength: 0
+  waveStart: 0
+  spawnInterval: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+  pathTarget: []

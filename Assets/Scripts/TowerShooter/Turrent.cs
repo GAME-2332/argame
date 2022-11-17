@@ -34,10 +34,10 @@ public class Turrent : MonoBehaviour
     public Transform firePoint;
     
     
-    void Start() {
-        //Repeats called method
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
+    // void Start() {
+    //     //Repeats called method
+    //     InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    // }
 
     void UpdateTarget()
     {
@@ -66,38 +66,40 @@ public class Turrent : MonoBehaviour
     }
 
     void Update(){
+        UpdateTarget();
         if (target == null)
             return;
         
-           //Target Lock on
-           Vector3 direction = target.position - transform.position;
-           Quaternion lookRotate = Quaternion.LookRotation(direction);
-           //When turrent looks at new enemy, it smoothly turns to the new enemy, instead of snapping 
-           Vector3 rotation = Quaternion.Lerp(turrentBase.rotation, lookRotate, Time.deltaTime * turrentSpeed).eulerAngles;
-           //this actually turns the turrent
-           turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+       //Target Lock on
+       // Vector3 direction = target.position - transform.position;
+       // Quaternion lookRotate = Quaternion.LookRotation(direction);
+       //When turrent looks at new enemy, it smoothly turns to the new enemy, instead of snapping 
+       // Vector3 rotation = Quaternion.Lerp(turrentBase.rotation, lookRotate, Time.deltaTime * turrentSpeed).eulerAngles;
+       //this actually turns the turrent
+       // turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+       turrentBase.LookAt(target);
 
-           if (fireCountdown <= 0f)
-           {
-               Shoot();
-               // if firerate is 2, fire 2 bullet each second, countdown from .5
-               fireCountdown = 1f / fireRate;
-           }
+       if (fireCountdown <= 0f)
+       {
+           Shoot();
+           // if firerate is 2, fire 2 bullet each second, countdown from .5
+           fireCountdown = (1f / fireRate) * 10f;
+       }
 
-           fireCountdown -= Time.deltaTime;
+       fireCountdown -= Time.deltaTime;
 
     }
 
     void Shoot() {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint);
+        bulletGO.transform.localScale = new(.01f, .01f, .01f);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         
         //plays shooting sfx
-        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
-        shootAudio.Play();
+        // shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
+        // shootAudio.Play();
         
-        if (bullet != null)
-            bullet.Seek(target);
+        if (bullet != null) bullet.Seek(target);
         // Debug.Log("Shoot!");
     }
 

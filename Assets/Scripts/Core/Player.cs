@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +10,9 @@ public class Player : MonoBehaviour
     int currenthealth;
     [SerializeField]
     HealthBar healthbar;
+
+    [SerializeField]
+    SceneReference ReturnToMain;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +26,9 @@ public class Player : MonoBehaviour
         currenthealth = maxhealth;
         if (healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
+            healthbar = FindObjectOfType<HealthBar>();
         }
 
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 
     public void TakeDamage(int damageReceived) //called by Enemy on its collision.
@@ -54,5 +50,6 @@ public class Player : MonoBehaviour
     {
         GameObject.Destroy(this.gameObject);
         //return to start menu.
+        SceneManager.LoadScene(ReturnToMain);
     }
 }

@@ -1,16 +1,16 @@
+using Persistence;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Bank : MonoBehaviour
+public class Bank : MonoBehaviour, IRuntimeSerialized
 {
     
-
-    [SerializeField]
     TMPro.TMP_Text BankText;
 
     [SerializeField]
-     int currentAmount;
+    int currentAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +62,10 @@ public class Bank : MonoBehaviour
     {
         currentAmount -= CoinsToSubtract;
         BankText.text = currentAmount.ToString() + " Coins";
+    }
+
+    public string GetSerializedName()
+    {
+        return "Bank";
     }
 }
