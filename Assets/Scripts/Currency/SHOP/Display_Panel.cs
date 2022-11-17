@@ -58,10 +58,6 @@ namespace TowerShop
             {
                 DisplayByTowerInfo(CurrentTowerToDisplay);
             }
-            else
-            {
-
-            }
 
             if (NextPage == null)
             {
@@ -166,15 +162,13 @@ namespace TowerShop
             Description_Text.enabled = false;
             Specs_Text.enabled = false;
 
-            Name_Text.text = _info.TowerName.ToString();
-
-            Description_Text.text = _info.Description.ToString();
-
-            Specs_Text.text = "Attack: " + _info.TowerAttackDamage.ToString() + 
-                "\n" + "Range: " + _info.TowerRange.ToString() + 
-                "\n" + "Speed: " + _info.TowerAttackSpeed.ToString();
+            Name_Text.text = _info.TowerName;
+            Description_Text.text = _info.Description;
+            Specs_Text.text = "Attack: " + _info.TowerAttackDamage + 
+                              "\n" + "Range: " + _info.TowerRange + 
+                              "\n" + "Speed: " + _info.TowerAttackSpeed;
             SetUpCost(_info.TowerCost);
-            Cost_Text.text ="Cost: " + _info.TowerCost.ToString();
+            Cost_Text.text ="Cost: " + _info.TowerCost;
 
             image.sprite = _info.Tower2dImage;
         }
@@ -195,11 +189,7 @@ namespace TowerShop
         }
         void BuyThis()
         {
-            if(CurrentTowerToDisplay == null)
-            {
-                //do nothing with buy button
-            }
-            else
+            if(CurrentTowerToDisplay != null)
             {
 
                 var selected = MainCamera.Instance.GetSelected();
@@ -218,8 +208,6 @@ namespace TowerShop
 
                 GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
             }
-           
-            //close the shop.
         }
     }
 
