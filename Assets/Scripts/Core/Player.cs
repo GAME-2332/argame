@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using XR;
 
 public class Player : MonoBehaviour
 {
@@ -29,15 +26,9 @@ public class Player : MonoBehaviour
         currenthealth = maxhealth;
         if (healthbar == null)
         {
-            healthbar = GetComponentInChildren<HealthAnchor>().GetHealthBar();
+            healthbar = FindObjectOfType<HealthBar>();
         }
 
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 
     public void TakeDamage(int damageReceived) //called by Enemy on its collision.
