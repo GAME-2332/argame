@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
+using XR;
 
 namespace TowerShop
 {
@@ -56,10 +57,6 @@ namespace TowerShop
             if(CurrentTowerToDisplay != null)
             {
                 DisplayByTowerInfo(CurrentTowerToDisplay);
-            }
-            else
-            {
-
             }
 
             if (NextPage == null)
@@ -165,15 +162,13 @@ namespace TowerShop
             Description_Text.enabled = false;
             Specs_Text.enabled = false;
 
-            Name_Text.text = _info.TowerName.ToString();
-
-            Description_Text.text = _info.Description.ToString();
-
-            Specs_Text.text = "Attack: " + _info.TowerAttackDamage.ToString() + 
-                "\n" + "Range: " + _info.TowerRange.ToString() + 
-                "\n" + "Speed: " + _info.TowerAttackSpeed.ToString();
+            Name_Text.text = _info.TowerName;
+            Description_Text.text = _info.Description;
+            Specs_Text.text = "Attack: " + _info.TowerAttackDamage + 
+                              "\n" + "Range: " + _info.TowerRange + 
+                              "\n" + "Speed: " + _info.TowerAttackSpeed;
             SetUpCost(_info.TowerCost);
-            Cost_Text.text ="Cost: " + _info.TowerCost.ToString();
+            Cost_Text.text ="Cost: " + _info.TowerCost;
 
             image.sprite = _info.Tower2dImage;
         }
@@ -194,19 +189,25 @@ namespace TowerShop
         }
         void BuyThis()
         {
-            if(CurrentTowerToDisplay == null)
+            if(CurrentTowerToDisplay != null)
             {
-                //do nothing with buy button
-            }
-            else
-            {
-                CheckReferences();
-                playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
-                SetUpCost(CurrentTowerToDisplay.TowerCost);
+
+                var selected = MainCamera.Instance.GetSelected();
+                if (selected is TowerSpawnPoint)
+                {
+                    CheckReferences();
+                    playerbank.SubtractCoins(CurrentTowerToDisplay.TowerCost);
+                    SetUpCost(CurrentTowerToDisplay.TowerCost);
+                    MainCamera.Instance.ClearSelected();
+                    TowerSpawnPoint tower = selected as TowerSpawnPoint;
+                    // Spawn tower
+                    GameObject newTower = Instantiate(CurrentTowerToDisplay.TowerPrefab, tower.transform);
+                    newTower.transform.localPosition = Vector3.up * .5f;
+                    newTower.transform.localScale = new(1, 20, 1);
+                }
+
                 GameObject.FindGameObjectWithTag("Bank").GetComponent<Shop_Listener>().CloseShop();
             }
-           
-            //close the shop.
         }
     }
 

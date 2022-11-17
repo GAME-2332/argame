@@ -19,7 +19,7 @@ public class Enemy_Spwaner : MonoBehaviour
 
     private GameObject enemyObject;
 
-    private Vector3 spawnPosition;
+    private Transform spawnTransform;
 
     private float waveStart = 1.0f;
 
@@ -37,7 +37,7 @@ public class Enemy_Spwaner : MonoBehaviour
         SpawnTime = SpawnerData.GetSpawnTime();
         wavetime = SpawnerData.GetWaveTime();
         enemyObject = SpawnerData.GetEnemy();
-        spawnPosition = SpawnerData.GetSpawnPos();
+        spawnTransform = SpawnerData.getSpawnTransform();
         waveStart = SpawnerData.GetSpawnInterval();
         spawnInterval = SpawnerData.GetWaveInterval();
 
@@ -57,7 +57,7 @@ public class Enemy_Spwaner : MonoBehaviour
         {
             if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime)
             {
-                Path_Enemy enemy = Instantiate(enemyObject, spawnPosition, Quaternion.identity).GetComponent<Path_Enemy>();
+                Path_Enemy enemy = Instantiate(enemyObject, spawnTransform.position, Quaternion.identity).GetComponent<Path_Enemy>();
 
                 enemy.SetSpeed(SpawnerData.GetSpeed());
                 enemy.SetTargetpath(SpawnerData.GetPathTarget());

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.TextCore.Text;
 using UnityEngine;
+using XR;
 
 public class Shop_Listener : MonoBehaviour
 {
@@ -31,24 +29,24 @@ public class Shop_Listener : MonoBehaviour
         }
     }
 
-    void SummonShop()
-    {
-        if(shopExists == false)
-        {
-
-            shopExists = true;
-            shoppointer = Instantiate(shopwindow, transform.parent.parent);
-        }
-        else
-        {
-            CloseShop();
+    public void SummonShop() {
+        if (GameManager.GameState.IsPlaying()) {
+            if (shopExists == false) {
+                GameManager.GameState = GameState.Shop;
+                shopExists = true;
+                shoppointer = Instantiate(shopwindow, transform.parent.parent);
+            }
+            else {
+                CloseShop();
+            }
         }
     }
 
     public void CloseShop()
     {
-        if(shopExists == true)
+        if(shopExists == true || shoppointer != null)
         {
+            GameManager.GameState = GameState.Playing;
             shopExists = false;
             GameObject.Destroy(shoppointer.gameObject);
         }

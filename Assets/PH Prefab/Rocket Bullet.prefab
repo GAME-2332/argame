@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6077487748653658868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: -2.24}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5841fe32d73e9419d0f97906a615ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletdamage: 10
+  Bulletdamage: 20
   speed: 40
   impactFX: {fileID: 5827340625473055669, guid: b99c62c8a9d3f2944a20c41e9aa09ff1, type: 3}
 --- !u!54 &468715818433590869
