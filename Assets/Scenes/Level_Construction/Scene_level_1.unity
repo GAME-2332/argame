@@ -130,6 +130,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1048331899057759996, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048331899057759996, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048331899057759996, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457307753333977467, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457307753333977467, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259207279342602034, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_Name
+      value: EnemyPath_Tiles
+      objectReference: {fileID: 0}
     - target: {fileID: 6225611632062216380, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
       propertyPath: m_RootOrder
       value: 0
