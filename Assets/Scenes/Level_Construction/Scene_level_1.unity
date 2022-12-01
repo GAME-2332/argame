@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3259207279342602034, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
+      propertyPath: m_Name
+      value: EnemyPath_Tiles
+      objectReference: {fileID: 0}
     - target: {fileID: 6225611632062216380, guid: 1f0b8617bd706d04b9cd8afb47eb8681, type: 3}
       propertyPath: m_RootOrder
       value: 0
