@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XR;
 
 public class Enemy_Spwaner : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class Enemy_Spwaner : MonoBehaviour
 
     private float wavetime;
 
-    private bool bTimer = false;
+    public bool bTimer = false;
     private float timerCount;
 
     private GameObject enemyObject;
@@ -31,7 +32,7 @@ public class Enemy_Spwaner : MonoBehaviour
         //enemyPath = new Path_Enemy();
         //enemyPath = GetComponent<Path_Enemy>();
 
-        bTimer = true;
+        bTimer = false;
         timerCount = 0;
 
         SpawnTime = SpawnerData.GetSpawnTime();
@@ -47,8 +48,20 @@ public class Enemy_Spwaner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerCount += Time.deltaTime;
-        Debug.Log("Time: " + timerCount);
+        if (GameManager.GameState.IsPlaying())
+        {
+            bTimer = true;
+            timerSTart();
+        }
+    }
+
+    void timerSTart()
+    {
+        if (bTimer == true)
+        {
+            timerCount += Time.deltaTime;
+            //Debug.Log("Time: " + timerCount);
+        }
     }
 
     void EnemySpawner()

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Path_Enemy : MonoBehaviour
 {
-    public EnemyClass enemyClassObj;
+    //public EnemyClass enemyClassObj;
+
+
 
     public Transform[] pathTarget;
     [SerializeField]
@@ -12,7 +14,12 @@ public class Path_Enemy : MonoBehaviour
 
     public float Speed;
 
-  
+    public float Distance;
+    public bool bFound = false;
+
+    public float checkDistance;
+    public float angle;
+
     public void SetTargetpath(Transform[] pathTargets)
     {
         pathTarget = pathTargets;
@@ -29,7 +36,7 @@ public class Path_Enemy : MonoBehaviour
     {
         CurrentPosition = 0;
 
-        
+        bFound = false;
         //var enemy = GetComponent<EnemyClass>();
         //pathTarget = enemy.GetPathTarget();
         //Speed = enemy.GetSpeed();
@@ -40,6 +47,7 @@ public class Path_Enemy : MonoBehaviour
     void Update()
     {
         FollowPath();
+        //findEnemyObject();
     }
 
     public void FollowPath()
@@ -56,5 +64,44 @@ public class Path_Enemy : MonoBehaviour
         }
     }
 
+    public void findEnemyObject()
+    {
+        GameObject [] targetEnemy = GameObject.FindGameObjectsWithTag("Enemy");
 
+        Transform[] targetTransform = new Transform[targetEnemy.Length];
+        int i;
+
+        
+        for (i = 0; i < targetTransform.Length; i++)
+        {
+            targetTransform[i] = targetEnemy[i].transform;
+            Vector3 EnemyDirection = targetTransform[i].position - transform.position;
+
+            checkDistance = Vector3.Distance(targetTransform[i].transform.position, transform.position);
+
+            angle = Vector3.Angle(EnemyDirection, transform.forward);
+            Debug.Log(targetEnemy[i]);
+            
+            if (targetEnemy[i])
+            {
+                bFound = true;
+            }
+        }
+
+        if (bFound)
+        {
+            if (checkDistance < 0.5f && angle < 5.0f)
+            {
+                // stop movement
+            }
+            else
+            {
+                FollowPath();
+            }
+        }
+        else
+        {
+            FollowPath();
+        }
+    }
 }
