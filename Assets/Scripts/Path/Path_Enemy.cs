@@ -87,6 +87,29 @@ public class Path_Enemy : MonoBehaviour
             CanMove = true;
         }
 
+        // alternative to line 59-88
+        /*RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
+        {
+            var other = hit.transform.GetComponent<Path_Enemy>();
+            if (other != null) CanMove = false;
+            else
+            {
+                var player = hit.transform.GetComponent<Player>();
+                if (player != null)
+                {
+                    CanMove = false;
+                    // Shoot the player
+                    player.TakeDamage(100);
+                }
+                else CanMove = true;
+            }
+        }
+        else
+        {
+            CanMove = true;
+        }*/
+
         if (!CanMove || CurrentPosition >= pathTarget.Length) return;
 
         if (transform.position != pathTarget[CurrentPosition].position)
