@@ -5,6 +5,9 @@ using XR;
 
 public class Enemy_Spwaner : MonoBehaviour
 {
+    public static bool IsAnySpawnerActive => _longestActiveSpawner != null;
+    private static Enemy_Spwaner _longestActiveSpawner;
+
     [Tooltip("SpawnerDataPath in scene")]
     public EnemyClass SpawnerData;
     [Tooltip("Preafab from folder")]
@@ -25,6 +28,8 @@ public class Enemy_Spwaner : MonoBehaviour
     private float waveStart = 1.0f;
 
     private float spawnInterval = 1.0f;
+
+    private Path_Enemy _lastSpawned;
     
     // Start is called before the first frame update
     void Start()
@@ -42,12 +47,17 @@ public class Enemy_Spwaner : MonoBehaviour
         waveStart = SpawnerData.GetSpawnInterval();
         spawnInterval = SpawnerData.GetWaveInterval();
 
+        // If this is longer than longestactivespawner or longestactivespawner is null, set longestactivespawner to this
+
+#if UNITY_EDITOR
         SpawnRepeater();
+#endif
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_lastSpawned != null && !_lastSpawned.CanMove) return;
         if (GameManager.GameState.IsPlaying())
         {
             bTimer = true;
@@ -74,11 +84,19 @@ public class Enemy_Spwaner : MonoBehaviour
 
                 enemy.SetSpeed(SpawnerData.GetSpeed());
                 enemy.SetTargetpath(SpawnerData.GetPathTarget());
+                _lastSpawned = enemy;
+
+                // check if this is the last enemy to spawn; if it is, and longestactivespawner==this, then set longestactivespawner to null
             }
         }
     }
 
-    void SpawnRepeater()
+    public float SpawnTotalTime()
+    {
+        return SpawnerData.spawnTime[SpawnerData.spawnTime.Length - 1] + SpawnerData.waveLength;
+    }
+
+    public void SpawnRepeater()
     {
         InvokeRepeating("EnemySpawner", waveStart, spawnInterval);
     }

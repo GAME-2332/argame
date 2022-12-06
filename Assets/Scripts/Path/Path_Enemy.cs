@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Path_Enemy : MonoBehaviour
 {
     //public EnemyClass enemyClassObj;
 
-
+    public bool CanMove { get; private set; } = true;
+    public float maxFollowDistance = 5;
 
     public Transform[] pathTarget;
     [SerializeField]
@@ -52,6 +54,28 @@ public class Path_Enemy : MonoBehaviour
 
     public void FollowPath()
     {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
+        {
+            var other = hit.transform.GetComponent<Path_Enemy>();
+            if (other != null) CanMove = false;
+            else 
+            {
+                var player = hit.transform.GetComponent<Player>();
+                if (player != null)
+                {
+                    CanMove = false;
+                    // Shoot the player
+                    player.TakeDamage(100);
+                }
+                else CanMove = true;
+            }
+        } else {
+            CanMove = true;
+        }
+
+        if (!CanMove || CurrentPosition >= pathTarget.Length) return;
+
         if (transform.position != pathTarget[CurrentPosition].position)
         {
             transform.position = Vector3.MoveTowards(transform.position, pathTarget[CurrentPosition].position, Speed * Time.deltaTime);
