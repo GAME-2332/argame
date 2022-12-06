@@ -17,10 +17,12 @@ public class Path_Enemy : MonoBehaviour
     public float Speed;
 
     public float Distance;
-    public bool bFound = false;
+    bool bFound = false;
 
-    public float checkDistance;
-    public float angle;
+    float checkDistance;
+    float angle;
+
+    public int dealDamage = 10;
 
     public void SetTargetpath(Transform[] pathTargets)
     {
@@ -58,19 +60,30 @@ public class Path_Enemy : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
         {
             var other = hit.transform.GetComponent<Path_Enemy>();
-            if (other != null) CanMove = false;
-            else 
+            var player = hit.transform.GetComponent<Player>();
+            if (other != null || player != null)
             {
-                var player = hit.transform.GetComponent<Player>();
+                Debug.Log("Hit enemy");
+                CanMove = false;
+
                 if (player != null)
-                {
-                    CanMove = false;
-                    // Shoot the player
-                    player.TakeDamage(100);
+                { 
+                    Debug.Log("Hit player");
                 }
-                else CanMove = true;
+
+                CanMove = false;
+
+                Distance = Vector3.Distance(player.transform.position, transform.position);
+                if (Distance < 1.5)
+                {
+                     player.TakeDamage(dealDamage);
+                }
             }
-        } else {
+
+            else CanMove = true;
+        } 
+        else 
+        {
             CanMove = true;
         }
 

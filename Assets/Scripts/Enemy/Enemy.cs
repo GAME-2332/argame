@@ -102,7 +102,6 @@ public class Enemy : MonoBehaviour {
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("taking 10 damage!");
