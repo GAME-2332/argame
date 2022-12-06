@@ -83,7 +83,7 @@ public class Turrent : MonoBehaviour
        {
            Shoot();
            // if firerate is 2, fire 2 bullet each second, countdown from .5
-           fireCountdown = (1f / fireRate) * 10f;
+           fireCountdown = (1f / fireRate);
        }
 
        fireCountdown -= Time.deltaTime;
