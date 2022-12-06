@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ac1879997cbd846a15499c32647695, type: 3}
-  m_Name: Turret Gun
+  m_Name: Rocket
   m_EditorClassIdentifier: 
-  TowerName: Sentry Turret
-  Description: A basic turret, low damage, high fire rate.
-  Tower2dImage: {fileID: 21300000, guid: b2f800db01e44e44eab68faaf98e5a45, type: 3}
+  TowerName: Canon (rocket)
+  Description: High Damage, low Fire Rate
+  Tower2dImage: {fileID: 21300000, guid: 457d61726b05e0941a58ff2267e457d1, type: 3}
   TowerHP: 0
-  TowerAttackDamage: 5
-  TowerAttackSpeed: 15
-  TowerRange: 10
+  TowerAttackDamage: 20
+  TowerAttackSpeed: 10
+  TowerRange: 5
   TowerCost: 100
-  TowerPrefab: {fileID: 3385616778280666198, guid: 4cdade55069ed6c46b653d7a18d4a65c, type: 3}
+  TowerPrefab: {fileID: 8865886945435046200, guid: 3faf646b045402840bb051fb30ce82e0, type: 3}
