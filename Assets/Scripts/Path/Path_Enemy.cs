@@ -17,10 +17,16 @@ public class Path_Enemy : MonoBehaviour
     public float Speed;
 
     public float Distance;
-    public bool bFound = false;
+    bool bFound = false;
 
-    public float checkDistance;
-    public float angle;
+    float checkDistance;
+    float angle;
+
+    public int dealDamage;
+
+    public float damageInterval;
+    private float timerCount = 0.0f;
+
 
     public void SetTargetpath(Transform[] pathTargets)
     {
@@ -36,7 +42,9 @@ public class Path_Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damageInterval = 1;
         CurrentPosition = 0;
+        dealDamage = 10;
 
         bFound = false;
         //var enemy = GetComponent<EnemyClass>();
@@ -48,29 +56,78 @@ public class Path_Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (GameManager.GameState.IsPlaying())
+        {
+            bTimer = true;
+            timerSTart();
+        }*/
+
         FollowPath();
         //findEnemyObject();
     }
 
     public void FollowPath()
     {
+        /*RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
+        {
+            var other = hit.transform.GetComponent<Path_Enemy>();
+            var player = hit.transform.GetComponent<Player>();
+            if (other != null || player != null)
+            {
+                Debug.Log("Hit enemy");
+                CanMove = false;
+
+                if (player != null)
+                { 
+                    Debug.Log("Hit player");
+                }
+
+                CanMove = false;
+
+                Distance = Vector3.Distance(player.transform.position, transform.position);
+                if (Distance < 1.5)
+                {
+                     player.TakeDamage(dealDamage);
+                }
+            }
+
+            else CanMove = true;
+        } 
+        else 
+        {
+            CanMove = true;
+        }*/
+
+        // alternative to line 59-88
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
         {
             var other = hit.transform.GetComponent<Path_Enemy>();
             if (other != null) CanMove = false;
-            else 
+            else
             {
                 var player = hit.transform.GetComponent<Player>();
+               
                 if (player != null)
                 {
+                    Distance = Vector3.Distance(player.transform.position, transform.position);
                     CanMove = false;
-                    // Shoot the player
-                    player.TakeDamage(100);
+
+                    Debug.Log("Hit player");
+
+                    if (Time.time > timerCount)
+                    {
+                        damagePlayer();
+                        timerCount = Time.time + damageInterval;
+                    }
+                    //player.TakeDamage(dealDamage);
                 }
                 else CanMove = true;
             }
-        } else {
+        }
+        else
+        {
             CanMove = true;
         }
 
@@ -87,6 +144,13 @@ public class Path_Enemy : MonoBehaviour
             CurrentPosition = (CurrentPosition + 1);
         }
     }
+
+    public void damagePlayer()
+    {
+        Player player = GameObject.Find("Tower").GetComponent<Player>();
+        player.TakeDamage(dealDamage);
+    }
+
 
     public void findEnemyObject()
     {
