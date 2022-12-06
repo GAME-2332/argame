@@ -91,8 +91,13 @@ public class Enemy : MonoBehaviour {
             isAttacking = true;
             StartCoroutine("Attacking");
             // destory this gameobject 
-            GameObject.Destroy(this.gameObject);
+            DestroyThisObject();
         }
+    }
+
+    public void DestroyThisObject()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 
     private void Update()
