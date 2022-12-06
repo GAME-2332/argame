@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XR;
 
 public class lvl_button : MonoBehaviour
 {
@@ -15,6 +17,9 @@ public class lvl_button : MonoBehaviour
     GameObject LevelPrefab;
     [SerializeField]
     SceneReference level_scene;
+
+    [SerializeField]
+    Level_Selector_Container container_ref;
     private void Start()
     {
         GetReferences();
@@ -62,11 +67,20 @@ public class lvl_button : MonoBehaviour
     void OnClickStartLevel()
     {
         Debug.Log("Loading level..." + level_number.text);
+        int current_level = Int32.Parse(level_number.text);
+        
+
+        if(container_ref == null)
+        {
+            container_ref = GameObject.FindObjectOfType<Level_Selector_Container>();
+        }
+        container_ref.StartLevel(current_level);
+        // Load the referenced scene
         //code to start the level here, move to the level scene. 
     }
-    public void SetLevelPrefab(GameObject pf)
+    public void SetLevelSelectorRef(Level_Selector_Container myref)
     {
-        LevelPrefab = pf;
+        container_ref = myref;
     }
 
 }

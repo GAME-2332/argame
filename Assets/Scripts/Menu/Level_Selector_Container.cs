@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using XR;
 
 public class Level_Selector_Container : MonoBehaviour
 {
@@ -9,6 +12,9 @@ public class Level_Selector_Container : MonoBehaviour
     GameObject AvailableLevelPrefab;
     [SerializeField]
     GameObject UnAvailableLevelPrefab;
+
+    [SerializeField]
+    SceneReference playable_level;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,14 +59,22 @@ public class Level_Selector_Container : MonoBehaviour
             current.GetComponent<lvl_button>().SetName(Level_Numbers[i]);
 
             current.GetComponent<lvl_button>().SetUnlocked(UnlockedStatus[i]);
+
+            current.GetComponent<lvl_button>().SetLevelSelectorRef(this);
+
+
             //current.GetComponent<lvl_button>().SetLevelPrefab();
-
-
-
+            // Load the referenced scene
         }
 
     }
+    public void StartLevel(int level_choice)
+    {
+        Debug.Log("Starting level" + level_choice);
+        GameManager.QueueLoadLevel(level_choice);
+        SceneManager.LoadScene(playable_level.ScenePath);
 
+    }
     void DestroyMyKids()
     {
         foreach(Transform child in transform)
