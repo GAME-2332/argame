@@ -32,6 +32,9 @@ public class Turrent : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Transform explodePos;
+
+     public GameObject explosionFX;
     
     
     // void Start() {
@@ -79,8 +82,7 @@ public class Turrent : MonoBehaviour
        // turrentBase.rotation = Quaternion.Euler(0f, rotation.y, 0f);
        turrentBase.LookAt(target);
 
-       if (fireCountdown <= 0f)
-       {
+       if (fireCountdown <= 0f) {
            Shoot();
            // if firerate is 2, fire 2 bullet each second, countdown from .5
            fireCountdown = (1f / fireRate);
@@ -91,13 +93,18 @@ public class Turrent : MonoBehaviour
     }
 
     void Shoot() {
+    //shoots bullet
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint);
+        GameObject Explosion_ = Instantiate(explosionFX, explodePos);
+        Debug.Log("explosion");
+        Destroy(Explosion_, 2f);
+        Explosion_.transform.localScale = new Vector3(.2f, .2f, .2f);
         bulletGO.transform.localScale = new(.01f, .01f, .01f);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         
         //plays shooting sfx
-        // shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
-        // shootAudio.Play();
+        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
+        shootAudio.Play();
         
         if (bullet != null) bullet.Seek(target);
         // Debug.Log("Shoot!");
