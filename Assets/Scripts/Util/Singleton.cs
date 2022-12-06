@@ -13,9 +13,9 @@ namespace Util {
         public T Value {
             get => value;
             set {
-                if (this.value != null && _onUnset != null) _onUnset.Invoke(this.value);
+                if (this.value != null) _onUnset?.Invoke(this.value);
                 this.value = value;
-                if (this.value != null) _onSet.Invoke(this.value);
+                if (this.value != null) _onSet?.Invoke(this.value);
             }
         }
         
@@ -27,7 +27,7 @@ namespace Util {
         /// <param name="initial">An initial value</param>
         /// <param name="onSet">The function to call on a given value when it's set</param>
         /// <param name="onUnset">The function to call on a given value when it becomes no longer the selected instance</param>
-        public Singleton(T initial, Action<T> onSet, Action<T> onUnset) {
+        public Singleton(T initial, Action<T> onSet = null, Action<T> onUnset = null) {
             value = initial;
             _defaultValue = initial;
             _onSet = onSet;

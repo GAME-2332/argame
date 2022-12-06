@@ -39,7 +39,7 @@ namespace XR {
             if (GameManager.GameState.IsPlaying() && Input.touchCount >= 1) {
                 var touch = Input.GetTouch(0);
                 if (touch.phase == TouchPhase.Began) {
-                    if (_hovered != null) {
+                    if (_hovered.IsPresent()) {
                         ClearSelected();
                         _hovered.Get().Interact();
                     }
