@@ -72,8 +72,12 @@ public class Level_Selector : MonoBehaviour
 
         for (int i = 0; i < units_to_display; i++)
         {
-            //Debug.Log("displaying page" + (firstlevel + i)) ;
-            level_number.Add((firstlevel+i).ToString());
+
+            int current_level = firstlevel + i;
+            level_number.Add((current_level).ToString());
+
+           
+
             if((firstlevel+i) < amountOfLevelsUnlocked)
             {
                 isUnlocked.Add(true);
