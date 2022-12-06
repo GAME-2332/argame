@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 0}
   soundFX: []
-  range: 3
+  range: 5
   fireRate: 10
   enemyTag: Enemy
   turrentBase: {fileID: 368569414}

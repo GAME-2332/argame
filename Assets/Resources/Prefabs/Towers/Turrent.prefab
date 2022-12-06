@@ -271,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3567427353416326791, guid: fcbdc0e39e5f3584ca5cdc8333facfd4, type: 3}
       propertyPath: m_Name
-      value: Prefab Base Variant
+      value: Turrent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcbdc0e39e5f3584ca5cdc8333facfd4, type: 3}
@@ -294,13 +294,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 0}
   soundFX: []
-  range: 4.51
-  fireRate: 2
+  range: 10
+  fireRate: 15
   enemyTag: Enemy
   turrentBase: {fileID: 981273095}
   turrentSpeed: 10
   bulletPrefab: {fileID: 6077487748653658868, guid: 4d30ea8b787384349ae5a46d0f444328, type: 3}
   firePoint: {fileID: 953515283}
+  explodePos: {fileID: 0}
+  explosionFX: {fileID: 0}
 --- !u!4 &3788286039460715007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3165079287288120110, guid: fcbdc0e39e5f3584ca5cdc8333facfd4, type: 3}
