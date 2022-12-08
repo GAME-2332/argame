@@ -88,7 +88,6 @@ public class Turrent : MonoBehaviour
        }
 
        fireCountdown -= Time.deltaTime;
-
     }
 
     void Shoot() {

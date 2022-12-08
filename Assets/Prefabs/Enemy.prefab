@@ -100,8 +100,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.734173, y: 15.285776, z: 11.112883}
+  m_Center: {x: 0.4102993, y: 2.9100788, z: 0.505538}
 --- !u!54 &576019166316821761
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,9 +158,8 @@ MonoBehaviour:
   CurrentPosition: 0
   Speed: 0.05
   Distance: 0
-  bFound: 0
-  checkDistance: 0
-  angle: 0
+  dealDamage: 0
+  damageInterval: 0
 --- !u!1001 &2609451628410170279
 PrefabInstance:
   m_ObjectHideFlags: 0

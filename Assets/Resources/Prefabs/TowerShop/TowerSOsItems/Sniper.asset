@@ -20,4 +20,4 @@ MonoBehaviour:
   TowerAttackSpeed: 8
   TowerRange: 25
   TowerCost: 100
-  TowerPrefab: {fileID: 5324430188147288823, guid: c4560c8d0fffa8e47866fa03d6534493, type: 3}
+  TowerPrefab: {fileID: 6340748822626753980, guid: c95cd14c70902ac4e9ee370f1fa18069, type: 3}

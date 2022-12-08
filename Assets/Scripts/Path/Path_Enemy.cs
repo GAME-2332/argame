@@ -69,38 +69,6 @@ public class Path_Enemy : MonoBehaviour
 
     public void FollowPath()
     {
-        /*RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
-        {
-            var other = hit.transform.GetComponent<Path_Enemy>();
-            var player = hit.transform.GetComponent<Player>();
-            if (other != null || player != null)
-            {
-                Debug.Log("Hit enemy");
-                CanMove = false;
-
-                if (player != null)
-                { 
-                    Debug.Log("Hit player");
-                }
-
-                CanMove = false;
-
-                Distance = Vector3.Distance(player.transform.position, transform.position);
-                if (Distance < 1.5)
-                {
-                     player.TakeDamage(dealDamage);
-                }
-            }
-
-            else CanMove = true;
-        } 
-        else 
-        {
-            CanMove = true;
-        }*/
-
-        // alternative to line 59-88
         RaycastHit hit;
         float rayLength = transform.lossyScale.z * maxFollowDistance * 10f;
         if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength))
@@ -116,7 +84,6 @@ public class Path_Enemy : MonoBehaviour
                
                 if (player != null) {
                     tracking = Tracking.Player;
-                    Distance = Vector3.Distance(player.transform.position, transform.position);
                     CanMove = false;
 
                     Debug.Log("Hit player");
