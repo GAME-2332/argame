@@ -8939,6 +8939,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3151136561302087849}
     m_Modifications:
     - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: enemySpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: spawnTransform
       value: 
       objectReference: {fileID: 6664158768096576467}
@@ -10598,6 +10602,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3151136561302087849}
     m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: enemySpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: spawnTransform
       value: 
@@ -22830,6 +22842,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3151136561302087849}
     m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: enemySpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
       propertyPath: spawnTransform
       value: 
