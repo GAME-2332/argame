@@ -5,15 +5,14 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
-
+[RequireComponent(typeof(AudioSource))]
 public class Turrent : MonoBehaviour
 {
 
     private Transform target;
 
-    [Header("Audio")] 
-     public AudioSource shootAudio;
-     public AudioClip[] soundFX;
+     [Header("Audio")] 
+     public AudioClip soundFX;
     
     
     
@@ -102,8 +101,7 @@ public class Turrent : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         
         //plays shooting sfx
-        shootAudio.clip = soundFX[Random.Range(0, soundFX.Length)];
-        shootAudio.Play();
+        AudioSource.PlayClipAtPoint(soundFX, transform.position);
         
         if (bullet != null) bullet.Seek(target);
         // Debug.Log("Shoot!");

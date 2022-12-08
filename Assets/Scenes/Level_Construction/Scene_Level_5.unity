@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,9 +130,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510444253383993423, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveStart
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510444253383993423, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveLength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510444253383993423, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1567472354644637763, guid: e7afb1448cf82f144be614be92c36152, type: 3}
       propertyPath: m_Name
       value: Scene_Level_5_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032240524892744239, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveStart
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032240524892744239, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveLength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032240524892744239, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: spawnInterval
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3151136561302087849, guid: e7afb1448cf82f144be614be92c36152, type: 3}
       propertyPath: m_RootOrder
@@ -177,6 +201,18 @@ PrefabInstance:
     - target: {fileID: 3151136561302087849, guid: e7afb1448cf82f144be614be92c36152, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586160699795208270, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveStart
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586160699795208270, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: waveLength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586160699795208270, guid: e7afb1448cf82f144be614be92c36152, type: 3}
+      propertyPath: spawnInterval
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7afb1448cf82f144be614be92c36152, type: 3}
