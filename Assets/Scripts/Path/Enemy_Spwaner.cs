@@ -76,8 +76,9 @@ public class Enemy_Spwaner : MonoBehaviour
     }
 
     void EnemySpawner()
-    {
-        for (int i = 0; i < SpawnTime.Length; i++)
+	{
+		if (_lastSpawned != null && (_lastSpawned.tracking == Path_Enemy.Tracking.Enemy)) return;
+		for (int i = 0; i < SpawnTime.Length; i++)
         {
             if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime) {
                 Transform board = null;
