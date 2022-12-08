@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 5083022530232342492}
   - component: {fileID: 5374920056558171704}
   - component: {fileID: 5327188405485058039}
+  - component: {fileID: 8315371756569624946}
+  - component: {fileID: 4854132882661495667}
+  - component: {fileID: 4769883907225425332}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (8)
   m_TagString: Untagged
@@ -97,6 +100,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8315371756569624946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60619685093974194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &4854132882661495667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60619685093974194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4769883907225425332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60619685093974194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &109856126809932665
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +195,6 @@ Transform:
   - {fileID: 6498907214641685751}
   - {fileID: 140925212797280286}
   - {fileID: 7659404896964611789}
-  - {fileID: 8807106299779410570}
   m_Father: {fileID: 5890153658767720164}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -166,6 +210,8 @@ GameObject:
   - component: {fileID: 7772579208580933651}
   - component: {fileID: 2870790732424588786}
   - component: {fileID: 540796811839225}
+  - component: {fileID: 3425268644282207860}
+  - component: {fileID: 4478156695280970517}
   m_Layer: 0
   m_Name: Defense_Placement_Rocket_Launcher_Turret (2)
   m_TagString: Untagged
@@ -251,6 +297,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3425268644282207860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135501351020539310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &4478156695280970517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135501351020539310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &232578005155861973
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +551,9 @@ GameObject:
   - component: {fileID: 3227160399467593943}
   - component: {fileID: 889183372034285928}
   - component: {fileID: 3679288630418994378}
+  - component: {fileID: 2121800729392337783}
+  - component: {fileID: 1290058267042778080}
+  - component: {fileID: 4758162292646420113}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (1)
   m_TagString: Untagged
@@ -560,6 +639,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2121800729392337783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748530793958823833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1290058267042778080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748530793958823833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4758162292646420113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748530793958823833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &800420337164747676
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +887,9 @@ GameObject:
   - component: {fileID: 7268526098287880028}
   - component: {fileID: 4279423123481833042}
   - component: {fileID: 6744179240231374753}
+  - component: {fileID: 1443131052346470440}
+  - component: {fileID: 1251928158169135841}
+  - component: {fileID: 6145129764267732323}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (6)
   m_TagString: Untagged
@@ -851,6 +975,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1443131052346470440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110077401770889209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1251928158169135841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110077401770889209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6145129764267732323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110077401770889209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141474881322338442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1538,11 @@ Transform:
   - {fileID: 2373500358599807433}
   - {fileID: 6567474640073681039}
   - {fileID: 2277801100734467172}
+  - {fileID: 6009037769650730246}
+  - {fileID: 3789953495020496148}
+  - {fileID: 158804806013359727}
+  - {fileID: 3015263325861986694}
+  - {fileID: 3559571559953252934}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2217,6 +2388,8 @@ GameObject:
   - component: {fileID: 3373877246250534179}
   - component: {fileID: 2302288366282567307}
   - component: {fileID: 1116147322981295746}
+  - component: {fileID: 715969683247846634}
+  - component: {fileID: 8194044905138520437}
   m_Layer: 0
   m_Name: Defense_Placement_Rocket_Launcher_Turret (3)
   m_TagString: Untagged
@@ -2302,6 +2475,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &715969683247846634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656645666568645783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &8194044905138520437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656645666568645783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3736429137109719606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2551,9 @@ GameObject:
   - component: {fileID: 7409484056963392599}
   - component: {fileID: 1967523464698277082}
   - component: {fileID: 5228376254632976986}
+  - component: {fileID: 6247463661652681982}
+  - component: {fileID: 8663279645722665367}
+  - component: {fileID: 1077224236750201844}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (9)
   m_TagString: Untagged
@@ -2433,6 +2639,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6247463661652681982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841039609307450033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &8663279645722665367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841039609307450033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1077224236750201844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841039609307450033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3944656917852817871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2888,9 @@ GameObject:
   - component: {fileID: 8267605008874043126}
   - component: {fileID: 4030164618115912350}
   - component: {fileID: 35938359406748032}
+  - component: {fileID: 5038321184789667479}
+  - component: {fileID: 3018925402785172703}
+  - component: {fileID: 4123005413492915810}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (14)
   m_TagString: Untagged
@@ -2725,6 +2976,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5038321184789667479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337667750612890646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &3018925402785172703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337667750612890646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4123005413492915810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337667750612890646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4425259180978692619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +3030,9 @@ GameObject:
   - component: {fileID: 1319153623690772035}
   - component: {fileID: 429348025736848428}
   - component: {fileID: 5313963598774182191}
+  - component: {fileID: 6450787439178737824}
+  - component: {fileID: 2974222776910725684}
+  - component: {fileID: 5264158355514961412}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (3)
   m_TagString: Untagged
@@ -2822,6 +3118,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6450787439178737824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425259180978692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2974222776910725684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425259180978692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5264158355514961412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425259180978692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4446278388815591147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3658,9 @@ GameObject:
   - component: {fileID: 8932025768092456254}
   - component: {fileID: 8346518935203768581}
   - component: {fileID: 3439902854932937991}
+  - component: {fileID: 4358387663511813923}
+  - component: {fileID: 4507073351459643215}
+  - component: {fileID: 6087507366126981770}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (11)
   m_TagString: Untagged
@@ -3405,6 +3746,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4358387663511813923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708448665280548121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &4507073351459643215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708448665280548121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6087507366126981770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708448665280548121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5847583145096911070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,6 +3928,9 @@ GameObject:
   - component: {fileID: 2886697683994087669}
   - component: {fileID: 4698607586000780507}
   - component: {fileID: 5959008127391693386}
+  - component: {fileID: 7644484938330169888}
+  - component: {fileID: 3032047309173264251}
+  - component: {fileID: 7143146716779007247}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (2)
   m_TagString: Untagged
@@ -3630,6 +4016,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7644484938330169888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936442716271942480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &3032047309173264251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936442716271942480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7143146716779007247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936442716271942480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999001480270498479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,6 +4070,9 @@ GameObject:
   - component: {fileID: 9207701374473943929}
   - component: {fileID: 2146542555263637878}
   - component: {fileID: 8671240074292505703}
+  - component: {fileID: 7488382135873839911}
+  - component: {fileID: 2944131309002090829}
+  - component: {fileID: 7652598282819110106}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (15)
   m_TagString: Untagged
@@ -3727,6 +4158,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7488382135873839911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999001480270498479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2944131309002090829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999001480270498479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7652598282819110106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999001480270498479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6050634882781921497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,6 +4212,9 @@ GameObject:
   - component: {fileID: 5924376713601963180}
   - component: {fileID: 6597821937392301799}
   - component: {fileID: 845728024418449095}
+  - component: {fileID: 2592148285484066162}
+  - component: {fileID: 4732772705809361573}
+  - component: {fileID: 5326061613047795814}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (5)
   m_TagString: Untagged
@@ -3824,6 +4300,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2592148285484066162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050634882781921497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &4732772705809361573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050634882781921497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5326061613047795814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050634882781921497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6172412433606259143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3836,6 +4354,9 @@ GameObject:
   - component: {fileID: 3926905933608710949}
   - component: {fileID: 3525431673357935376}
   - component: {fileID: 7293619681546429484}
+  - component: {fileID: 3766652834105205088}
+  - component: {fileID: 2481290465030434322}
+  - component: {fileID: 6512714817696929256}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (4)
   m_TagString: Untagged
@@ -3921,6 +4442,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3766652834105205088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172412433606259143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2481290465030434322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172412433606259143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6512714817696929256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172412433606259143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6198697168661962020
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,6 +4870,8 @@ GameObject:
   - component: {fileID: 776489149899204472}
   - component: {fileID: 7006068226028191710}
   - component: {fileID: 3697677460972007226}
+  - component: {fileID: 917723330878200815}
+  - component: {fileID: 6827136546905330459}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (12)
   m_TagString: Untagged
@@ -4392,6 +4957,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &917723330878200815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493956560287104586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &6827136546905330459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493956560287104586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7636536191931640995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,6 +5127,8 @@ GameObject:
   - component: {fileID: 6515655939433094142}
   - component: {fileID: 221133251811378992}
   - component: {fileID: 7133357436057009217}
+  - component: {fileID: 7776711656087635816}
+  - component: {fileID: 6182041790960311241}
   m_Layer: 0
   m_Name: Defense_Placement_Rocket_Launcher_Turret (4)
   m_TagString: Untagged
@@ -4617,6 +5214,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7776711656087635816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7844793237226515119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &6182041790960311241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7844793237226515119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8044946668312019136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,6 +5450,9 @@ GameObject:
   - component: {fileID: 4914718221472665242}
   - component: {fileID: 2725694057520296366}
   - component: {fileID: 3496632222397538478}
+  - component: {fileID: 2367634699978473900}
+  - component: {fileID: 6347547190002873568}
+  - component: {fileID: 3805176807290023101}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (10)
   m_TagString: Untagged
@@ -4908,6 +5538,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2367634699978473900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114969409084401332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &6347547190002873568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114969409084401332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3805176807290023101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114969409084401332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8300550117445140618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,6 +5720,9 @@ GameObject:
   - component: {fileID: 194264169552169254}
   - component: {fileID: 1877319240797321669}
   - component: {fileID: 4488661367903839277}
+  - component: {fileID: 8182282724867337715}
+  - component: {fileID: 7487712541075356301}
+  - component: {fileID: 7527374346286104532}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (13)
   m_TagString: Untagged
@@ -5133,6 +5808,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8182282724867337715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526667935007440660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &7487712541075356301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526667935007440660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7527374346286104532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526667935007440660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8535819532971884400
 GameObject:
   m_ObjectHideFlags: 0
@@ -5145,6 +5862,9 @@ GameObject:
   - component: {fileID: 2928688099826219668}
   - component: {fileID: 1563187235248878407}
   - component: {fileID: 3177135569073612411}
+  - component: {fileID: 5106844332807242702}
+  - component: {fileID: 482352080087396152}
+  - component: {fileID: 6913863228628410241}
   m_Layer: 0
   m_Name: Defense_Placement_Sniper_Tower (7)
   m_TagString: Untagged
@@ -5230,6 +5950,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5106844332807242702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535819532971884400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &482352080087396152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535819532971884400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6913863228628410241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535819532971884400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856162833938533067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,6 +6004,8 @@ GameObject:
   - component: {fileID: 7583833835994514767}
   - component: {fileID: 6029031625596289112}
   - component: {fileID: 8064079660658171382}
+  - component: {fileID: 687667319131887521}
+  - component: {fileID: 5330064692710496021}
   m_Layer: 0
   m_Name: Defense_Placement_Rocket_Launcher_Turret (1)
   m_TagString: Untagged
@@ -5327,6 +6091,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &687667319131887521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856162833938533067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &5330064692710496021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856162833938533067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1498236244c634cb537f37352d8877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8901705741386913115
 GameObject:
   m_ObjectHideFlags: 0
@@ -11099,6 +11893,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3938307282788826152, guid: cc0e83290e47aea4eb5d172594fcb831, type: 3}
   m_PrefabInstance: {fileID: 2090367016919957413}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2111460056656276102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5890153658767720164}
+    m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 8566658234039916285}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[0]
+      value: 
+      objectReference: {fileID: 8566658234039916285}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[1]
+      value: 
+      objectReference: {fileID: 2949655186535872023}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[2]
+      value: 
+      objectReference: {fileID: 4781596276320179383}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[3]
+      value: 
+      objectReference: {fileID: 7685598836934993111}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[4]
+      value: 
+      objectReference: {fileID: 1743956128426292351}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[5]
+      value: 
+      objectReference: {fileID: 2007839451302976351}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19569838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7677488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_Name
+      value: SpawnerDataPath (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+--- !u!4 &158804806013359727 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+  m_PrefabInstance: {fileID: 2111460056656276102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2257816859422696370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13913,6 +14801,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7897962597772962176, guid: e72995f19d54513468d8139f933611d8, type: 3}
   m_PrefabInstance: {fileID: 3144705328867817404}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3162027227220220413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5890153658767720164}
+    m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 5223973400319340837}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[0]
+      value: 
+      objectReference: {fileID: 5223973400319340837}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[1]
+      value: 
+      objectReference: {fileID: 2321183960784277276}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[2]
+      value: 
+      objectReference: {fileID: 1871788324365990750}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[3]
+      value: 
+      objectReference: {fileID: 2007839451302976351}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19569838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7677488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_Name
+      value: SpawnerDataPath
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+--- !u!4 &3789953495020496148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+  m_PrefabInstance: {fileID: 3162027227220220413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3215025581557629676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14432,6 +15406,100 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3938307282788826152, guid: cc0e83290e47aea4eb5d172594fcb831, type: 3}
   m_PrefabInstance: {fileID: 3306926305277336058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3323510171153055407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5890153658767720164}
+    m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 7932551113323449381}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[0]
+      value: 
+      objectReference: {fileID: 7932551113323449381}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[1]
+      value: 
+      objectReference: {fileID: 2007839451302976351}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[2]
+      value: 
+      objectReference: {fileID: 5303686640027861696}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[3]
+      value: 
+      objectReference: {fileID: 7359096780305431795}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[4]
+      value: 
+      objectReference: {fileID: 4958585306323620358}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[5]
+      value: 
+      objectReference: {fileID: 2007839451302976351}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19569838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7677488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_Name
+      value: SpawnerDataPath (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+--- !u!4 &3559571559953252934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+  m_PrefabInstance: {fileID: 3323510171153055407}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3324382117357876242
 PrefabInstance:
@@ -16421,6 +17489,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2708884274645541968, guid: dadad9fde0c8c8e46b2623c49e802b56, type: 3}
   m_PrefabInstance: {fileID: 3909978074082117190}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3936435906418130287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5890153658767720164}
+    m_Modifications:
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 7659404896964611789}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[0]
+      value: 
+      objectReference: {fileID: 7659404896964611789}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[1]
+      value: 
+      objectReference: {fileID: 6498907214641685751}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[2]
+      value: 
+      objectReference: {fileID: 5303686640027861696}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[3]
+      value: 
+      objectReference: {fileID: 7359096780305431795}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[4]
+      value: 
+      objectReference: {fileID: 4958585306323620358}
+    - target: {fileID: 558059670, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: pathTarget.Array.data[5]
+      value: 
+      objectReference: {fileID: 2007839451302976351}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19569838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7677488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267942419165183215, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+      propertyPath: m_Name
+      value: SpawnerDataPath (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+--- !u!4 &3015263325861986694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2267942419165183209, guid: f98e322be999cad44a6824a1facca95f, type: 3}
+  m_PrefabInstance: {fileID: 3936435906418130287}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4002870092843033913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18130,6 +19292,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3938307282788826152, guid: cc0e83290e47aea4eb5d172594fcb831, type: 3}
   m_PrefabInstance: {fileID: 4495101819309269458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4525906469207849328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5890153658767720164}
+    m_Modifications:
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.429
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12455356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902511091629509754, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+      propertyPath: m_Name
+      value: DefendSoldier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+--- !u!4 &6009037769650730246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7902511091629509750, guid: b8c3c23cb059e654486319b9482f4075, type: 3}
+  m_PrefabInstance: {fileID: 4525906469207849328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4528420986224773944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18637,68 +19861,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3938307282788826152, guid: cc0e83290e47aea4eb5d172594fcb831, type: 3}
   m_PrefabInstance: {fileID: 4714174895272056489}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4714262801445548108
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3340568829195805781}
-    m_Modifications:
-    - target: {fileID: 3467381534392795260, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_Name
-      value: Prefab_RedSoldierHandgun_Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.260999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.595312
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.4048882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
---- !u!4 &8807106299779410570 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4275408697440279238, guid: 83c590a1812afbd4388feee0c89e037a, type: 3}
-  m_PrefabInstance: {fileID: 4714262801445548108}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4717966088493070149
 PrefabInstance:
