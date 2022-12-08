@@ -30,6 +30,7 @@ public class Enemy_Spwaner : MonoBehaviour
     private float spawnInterval = 1.0f;
 
     private Path_Enemy _lastSpawned;
+    private bool _started = false;
     
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,8 @@ public class Enemy_Spwaner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_lastSpawned != null && !_lastSpawned.CanMove) return;
-        if (GameManager.GameState.IsPlaying())
+        if (_lastSpawned != null && (_lastSpawned.tracking == Path_Enemy.Tracking.Enemy)) return;
+        if (GameManager.GameState.IsPlaying() && _started)
         {
             bTimer = true;
             timerSTart();
@@ -78,9 +79,12 @@ public class Enemy_Spwaner : MonoBehaviour
     {
         for (int i = 0; i < SpawnTime.Length; i++)
         {
-            if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime)
-            {
-                Path_Enemy enemy = Instantiate(enemyObject, spawnTransform.position, Quaternion.identity).GetComponent<Path_Enemy>();
+            if (timerCount > SpawnTime[i] && timerCount <= SpawnTime[i] + wavetime) {
+                Transform board = Board.GetOrCreate().transform;
+                Path_Enemy enemy = Instantiate(enemyObject, board).GetComponent<Path_Enemy>();
+                enemy.transform.position = spawnTransform.position;
+                enemy.transform.rotation = Quaternion.identity;
+                // spawnTransform.position, Quaternion.identity).GetComponent<Path_Enemy>();
 
                 enemy.SetSpeed(SpawnerData.GetSpeed());
                 enemy.SetTargetpath(SpawnerData.GetPathTarget());
@@ -96,8 +100,8 @@ public class Enemy_Spwaner : MonoBehaviour
         return SpawnerData.spawnTime[SpawnerData.spawnTime.Length - 1] + SpawnerData.waveLength;
     }
 
-    public void SpawnRepeater()
-    {
+    public void SpawnRepeater() {
+        _started = true;
         InvokeRepeating("EnemySpawner", waveStart, spawnInterval);
     }
 }

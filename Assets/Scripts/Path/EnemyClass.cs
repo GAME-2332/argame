@@ -79,7 +79,10 @@ public class EnemyClass : MonoBehaviour
 
     public float GetSpeed()
     {
+#if UNITY_EDITOR
         return enemySpeed;
+#endif
+        return enemySpeed / 20f;
     }
 
     // Start is called before the first frame update

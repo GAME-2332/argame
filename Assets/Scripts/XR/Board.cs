@@ -8,6 +8,7 @@ namespace XR {
         private static Vector3 _followOffset = Vector3.zero;
         private static Vector3 _levelOffset = new(-7.5f, .5f, -7.5f);
         private static GameObject _level;
+        private static float _spawnStartTimer = -1;
         
         public static Board Instance { get; private set; }
 
@@ -52,6 +53,8 @@ namespace XR {
             GameObject levelPrefab = Resources.Load<GameObject>("Scene_Level_" + level);
             _level = Instantiate(levelPrefab, GetOrCreate().transform);
             _level.transform.localPosition = _levelOffset;
+
+            _spawnStartTimer = 5f;
         }
 
         private void Start() {
@@ -65,6 +68,15 @@ namespace XR {
         }
 
         private void Update() {
+            if (_spawnStartTimer != -1) {
+                _spawnStartTimer -= Time.deltaTime;
+                if (_spawnStartTimer <= 0) {
+                    _spawnStartTimer = -1;
+                    foreach (var spawner in FindObjectsOfType<Enemy_Spwaner>()) {
+                        spawner.SpawnRepeater();
+                    }
+                }
+            }
             if (_followTarget != null) {
                 _transform.position = _followTarget.position + _followOffset;
                 _transform.rotation = _followTarget.rotation;

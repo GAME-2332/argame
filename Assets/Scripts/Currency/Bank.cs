@@ -1,10 +1,11 @@
+using System;
 using Persistence;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Bank : MonoBehaviour, IRuntimeSerialized
+public class Bank : MonoBehaviour//, IRuntimeSerialized
 {
     
     TMPro.TMP_Text BankText;
@@ -14,12 +15,14 @@ public class Bank : MonoBehaviour, IRuntimeSerialized
     // Start is called before the first frame update
     void Start()
     {
-     
-        LoadCoins();
         if(BankText == null)
         {
             BankText = GetComponent<TMPro.TMP_Text>(); 
         }
+    }
+
+    private void Update() {
+        LoadCoins();
     }
 
     private void OnEnable()

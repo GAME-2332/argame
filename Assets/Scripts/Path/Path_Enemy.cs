@@ -27,6 +27,7 @@ public class Path_Enemy : MonoBehaviour
     public float damageInterval;
     private float timerCount = 0.0f;
 
+    public Tracking tracking { get; private set; }
 
     public void SetTargetpath(Transform[] pathTargets)
     {
@@ -101,16 +102,20 @@ public class Path_Enemy : MonoBehaviour
 
         // alternative to line 59-88
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxFollowDistance))
+        float rayLength = transform.lossyScale.z * maxFollowDistance * 10f;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, rayLength))
         {
             var other = hit.transform.GetComponent<Path_Enemy>();
-            if (other != null) CanMove = false;
+            if (other != null) {
+                CanMove = false;
+                tracking = Tracking.Enemy;
+            }
             else
             {
                 var player = hit.transform.GetComponent<Player>();
                
-                if (player != null)
-                {
+                if (player != null) {
+                    tracking = Tracking.Player;
                     Distance = Vector3.Distance(player.transform.position, transform.position);
                     CanMove = false;
 
@@ -123,12 +128,16 @@ public class Path_Enemy : MonoBehaviour
                     }
                     //player.TakeDamage(dealDamage);
                 }
-                else CanMove = true;
+                else {
+                    CanMove = true;
+                    tracking = Tracking.None;
+                }
             }
         }
         else
         {
             CanMove = true;
+            tracking = Tracking.None;
         }
 
         if (!CanMove || CurrentPosition >= pathTarget.Length) return;
@@ -191,5 +200,11 @@ public class Path_Enemy : MonoBehaviour
         {
             FollowPath();
         }
+    }
+
+    public enum Tracking {
+        None,
+        Player,
+        Enemy
     }
 }
