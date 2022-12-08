@@ -133,14 +133,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8330755056513356769, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
   m_PrefabInstance: {fileID: 6432967364402109293}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &530644053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9105644576451659215, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
+  m_PrefabInstance: {fileID: 6432967364402109293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1097344943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7233065764189530984, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
-  m_PrefabInstance: {fileID: 6432967364402109293}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1482220938 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2660605468506817643, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
   m_PrefabInstance: {fileID: 6432967364402109293}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1753425495 stripped
@@ -210,15 +210,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: enemySpeed
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: waveLength
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: spawnInterval
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: spawnTransform
@@ -226,19 +226,31 @@ PrefabInstance:
       objectReference: {fileID: 75270974}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: spawnTime.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: pathTarget.Array.size
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
+      propertyPath: spawnTime.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
+      propertyPath: spawnTime.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
+      propertyPath: spawnTime.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: spawnTime.Array.data[4]
-      value: 40
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: spawnTime.Array.data[5]
-      value: 40
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: pathTarget.Array.data[0]
@@ -263,6 +275,6 @@ PrefabInstance:
     - target: {fileID: 6093110852518877989, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
       propertyPath: pathTarget.Array.data[5]
       value: 
-      objectReference: {fileID: 1482220938}
+      objectReference: {fileID: 530644053}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34cfc5bd69876f34da801902b749ead3, type: 3}
