@@ -17,7 +17,7 @@ MonoBehaviour:
   Tower2dImage: {fileID: 21300000, guid: b2f800db01e44e44eab68faaf98e5a45, type: 3}
   TowerHP: 0
   TowerAttackDamage: 5
-  TowerAttackSpeed: 5
-  TowerRange: 4.5
+  TowerAttackSpeed: 15
+  TowerRange: 10
   TowerCost: 100
   TowerPrefab: {fileID: 3385616778280666198, guid: 4cdade55069ed6c46b653d7a18d4a65c, type: 3}

@@ -91,13 +91,17 @@ public class Enemy : MonoBehaviour {
             isAttacking = true;
             StartCoroutine("Attacking");
             // destory this gameobject 
-            GameObject.Destroy(this.gameObject);
+            DestroyThisObject();
         }
+    }
+
+    public void DestroyThisObject()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("taking 10 damage!");
@@ -141,6 +145,7 @@ public class Enemy : MonoBehaviour {
     public void Die()
     {
         DropCoins();
+        Destroy(gameObject);
     }
 
     void Attack()
@@ -168,6 +173,5 @@ public class Enemy : MonoBehaviour {
         NUMBERSCANVAS.CreateCoinText(this.transform, coinsDropped);
         //now you die after dropping the coins.
         OnAddCoins(coinsDropped);
-        GameObject.Destroy(this.gameObject);
     }
 }

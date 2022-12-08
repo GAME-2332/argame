@@ -9,7 +9,7 @@ public class StartButton : MonoBehaviour
 {
 
     [SerializeField]
-    SceneReference SceneToStart;
+    Level_Selector selector;
 
     [SerializeField]
     Button _button;
@@ -21,10 +21,19 @@ public class StartButton : MonoBehaviour
             _button = GetComponent<Button>();
         }
         _button.onClick.AddListener(StartGame);
+        if (selector == null)
+        {
+            selector = GameObject.FindObjectOfType<Level_Selector>();
+        }
     }
 
     void StartGame()
     {
         Debug.Log("You start the game.");
+        if (selector == null)
+        {
+            selector = GameObject.FindObjectOfType<Level_Selector>();
+        }
+        selector.StartCanvas();
     }
 }
