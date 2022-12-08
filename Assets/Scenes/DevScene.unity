@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309003488}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d71b883843748d49424917b78e2e28b, type: 3}
   m_Name: 
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1071288960646397585, guid: 8bacbdfd34ef634478bccbe3f84222aa, type: 3}
       propertyPath: currentAmount
-      value: 120
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1071288961143219522, guid: 8bacbdfd34ef634478bccbe3f84222aa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1165,7 +1165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3162ef04fd4902ac1155e3e1f7dfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisIsASerializedField: Hello World
 --- !u!114 &2034279257
 MonoBehaviour:
   m_ObjectHideFlags: 0
