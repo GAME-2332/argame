@@ -84,7 +84,7 @@ public class Enemy_Spwaner : MonoBehaviour
 #if !UNITY_EDITOR
                 board = Board.GetOrCreate().transform;
 #endif
-                Path_Enemy enemy = (board == null ? Instantiate(enemyObject, board) : Instantiate(enemyObject)).GetComponent<Path_Enemy>();
+                Path_Enemy enemy = Instantiate(enemyObject, board).GetComponent<Path_Enemy>();
                 enemy.transform.position = spawnTransform.position;
                 enemy.transform.rotation = Quaternion.identity;
                 // spawnTransform.position, Quaternion.identity).GetComponent<Path_Enemy>();
