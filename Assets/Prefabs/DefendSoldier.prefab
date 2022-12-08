@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7902511091629509749}
   - component: {fileID: 217200208}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: DefendSoldier
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
